@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const INDUSTRIES = [
-  { name: 'Logistics &\nCourier',  slug: 'logistics-courier', img: '/courierandlogistics.jpg', desc: 'Maximize The Efficiency & Profitability Of Your Fleet' },
+  { name: 'Logistics &\nCourier',  slug: 'logistics', img: '/courierandlogistics.jpg', desc: 'Maximize The Efficiency & Profitability Of Your Fleet' },
   { name: 'Public\nTransport',     slug: 'public-transport',  img: '/publictransport.jpg',      desc: 'Maximize The Efficiency & Profitability Of Your Fleet' },
   { name: 'Oil &\nGas',            slug: 'oil-gas',           img: '/oilandgas.jpg',            desc: 'Maximize The Efficiency & Profitability Of Your Fleet' },
   { name: 'Construction',          slug: 'construction',      img: '/construction.jpg',         desc: 'Maximize The Efficiency & Profitability Of Your Fleet' },

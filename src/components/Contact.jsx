@@ -5,7 +5,7 @@ const OFFICES = [
   {
     region: 'Europe Office', code: 'EU', flag: '🇪🇺',
     address: 'Frankfurt am Main, Germany',
-    phone: '+49 69 000 0000', email: 'info@timelinetelematics.eu',
+    phone: '+97 1563863615', email: 'info.eu@timelinetelematics.com',
     hours: 'Mon–Fri: 9:00 AM – 5:00 PM CET', color: '#003399',
     image: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80',
     tagline: 'European Regional Office',
@@ -13,7 +13,7 @@ const OFFICES = [
   {
     region: 'UAE Office', code: 'AE', flag: '🇦🇪',
     address: 'Business Bay, Dubai, United Arab Emirates',
-    phone: '+971 4 000 0000', email: 'info@timelinetelematics.ae',
+    phone: '+97 1563863615', email: 'info.ae@timelinetelematics.com',
     hours: 'Mon–Fri: 9:00 AM – 6:00 PM GST', color: '#009A44',
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80',
     tagline: 'Middle East Regional Office',
@@ -21,7 +21,7 @@ const OFFICES = [
   {
     region: 'Pakistan', code: 'PK', flag: '🇵🇰',
     address: 'Khayaban e Jami. 18c DHA Karachi',
-    phone: '+971563863615', email: 'support@timelinetelematics.me',
+    phone: '+97 1563863615', email: 'info.pk@timelinetelematics.com',
     hours: 'Mon–Sat: 9:00 AM – 6:00 PM PKT', color: '#E8312A',
     image: 'https://images.unsplash.com/photo-1635016288720-c52507b9a717?q=80&w=435&auto=format&fit=crop',
     tagline: 'Regional Office',
@@ -154,21 +154,6 @@ const Contact = () => {
   return (
     <section id="contact" style={{ background: '#fff' }}>
 
-      {/* Hero */}
-      <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', padding: '72px 24px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(232,49,42,0.12) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
-        <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'inline-block', background: 'rgba(232,49,42,0.15)', color: '#fca5a5', fontSize: '11px', fontWeight: '700', padding: '4px 14px', borderRadius: '999px', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '18px', fontFamily: 'Poppins, sans-serif' }}>
-            Get In Touch
-          </div>
-          <h1 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '800', fontSize: 'clamp(30px, 5vw, 52px)', color: '#fff', lineHeight: 1.1, marginBottom: '16px' }}>
-            Let's Talk About<br /><span style={{ color: '#E8312A' }}>Your Fleet</span>
-          </h1>
-          <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: '1.7', fontFamily: 'Poppins, sans-serif' }}>
-            Whether you're ready for a demo, need support, or just have questions — we're here. Our team responds within 24 hours.
-          </p>
-        </div>
-      </div>
 
       {/* Form + Sidebar */}
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '80px 24px' }}>

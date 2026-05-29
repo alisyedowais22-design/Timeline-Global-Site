@@ -277,9 +277,12 @@ const ValCard = ({ icon, title, desc }) => {
 
 // ── Regions ───────────────────────────────────────────────────────────────────
 const REGIONS = [
-  { code: 'PK', name: 'Pakistan',    flag: '🇵🇰', offices: 'Karachi · Lahore · Islamabad' },
-  { code: 'ME', name: 'Middle East', flag: '🇦🇪', offices: 'Dubai · Abu Dhabi' },
-  { code: 'EU', name: 'Europe',      flag: '🇪🇺', offices: 'Frankfurt · 12 countries' },
+  { code: 'PK', name: 'Pakistan',    flag: '🇵🇰', offices: 'Karachi · Lahore · Islamabad',
+    img: 'https://images.unsplash.com/photo-1608020932658-d0e19a69580b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { code: 'ME', name: 'Middle East', flag: '🇦🇪', offices: 'Dubai · Abu Dhabi',
+    img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80' },
+  { code: 'EU', name: 'Europe',      flag: '🇪🇺', offices: 'Frankfurt · 12 countries',
+    img: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80' },
 ];
 
 const RegionsSection = () => (
@@ -294,15 +297,29 @@ const RegionsSection = () => (
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '24px' }}>
         {REGIONS.map((r, i) => (
           <Reveal key={r.code} delay={i * 0.1}>
-            <div style={{ border: '1px solid rgba(200,16,46,0.25)', padding: '40px 32px', textAlign: 'center', transition: 'box-shadow 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 32px rgba(200,16,46,0.08)'}
-              onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
-            >
-              <span style={{ fontSize: '52px', display: 'block', marginBottom: '16px' }}>{r.flag}</span>
-              <h3 style={{ fontFamily: P, fontWeight: 700, fontSize: '20px', color: NAVY, marginBottom: '8px' }}>{r.name}</h3>
-              <p style={{ fontSize: '12px', color: '#8892A4', fontFamily: P, marginBottom: '16px' }}>{r.offices}</p>
-              <span style={{ fontSize: '10px', fontWeight: 700, padding: '4px 14px', letterSpacing: '1px', background: 'rgba(200,16,46,0.08)', color: RED, textTransform: 'uppercase', fontFamily: P }}>● Live</span>
-            </div>
+            <div style={{
+  border: '1px solid rgba(200,16,46,0.25)', padding: '40px 32px',
+  textAlign: 'center', transition: 'box-shadow 0.2s',
+  position: 'relative', overflow: 'hidden',
+}}
+  onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 32px rgba(200,16,46,0.08)'}
+  onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+>
+  {/* Background image with dark overlay */}
+  <div style={{
+    position: 'absolute', inset: 0,
+    backgroundImage: `url(${r.img})`,
+    backgroundSize: 'cover', backgroundPosition: 'center',
+    opacity: 0.12,
+  }} />
+  {/* Content (same as before, no change) */}
+  <div style={{ position: 'relative', zIndex: 1 }}>
+    <span style={{ fontSize: '52px', display: 'block', marginBottom: '16px' }}>{r.flag}</span>
+    <h3 style={{ fontFamily: P, fontWeight: 700, fontSize: '20px', color: NAVY, marginBottom: '8px' }}>{r.name}</h3>
+    <p style={{ fontSize: '12px', color: '#8892A4', fontFamily: P, marginBottom: '16px' }}>{r.offices}</p>
+    <span style={{ fontSize: '10px', fontWeight: 700, padding: '4px 14px', letterSpacing: '1px', background: 'rgba(200,16,46,0.08)', color: RED, textTransform: 'uppercase', fontFamily: P }}>● Live</span>
+  </div>
+</div>
           </Reveal>
         ))}
       </div>

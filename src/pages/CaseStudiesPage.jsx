@@ -14,10 +14,9 @@ const CaseStudiesPage = () => {
       <main style={{ paddingTop: '116px' }}>
         {/* Page hero */}
         <div style={{
-          background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
-          padding: '72px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden',
+          padding: '172px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden',
         }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(232,49,42,0.1) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80)', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.3)' }} />
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{
               display: 'inline-block', background: 'rgba(232,49,42,0.15)', color: '#fca5a5',

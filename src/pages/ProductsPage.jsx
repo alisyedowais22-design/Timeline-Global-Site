@@ -89,16 +89,25 @@ const ProductsPage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="products-hero">
-        <div className="container">
-          <h1 className="products-hero-title">GPS Tracking Devices</h1>
-          <p className="products-hero-subtitle">Intelligent Integrated Tracking Solutions</p>
-          <p className="products-hero-desc">
-            Timeline provides complete solutions for real-time GPS fleet management, vehicle security,
-            personal tracking, asset monitoring, and AI-powered dashcams.
-          </p>
-        </div>
-      </section>
+      {/* Hero */}
+<section
+  className="products-hero"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.52), rgba(0,0,0,0.52)), url('https://images.unsplash.com/photo-1602526432604-029a709e131c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+  <div className="container">
+    <h1 className="products-hero-title">GPS Tracking Devices</h1>
+    <p className="products-hero-subtitle">Intelligent Integrated Tracking Solutions</p>
+    <p className="products-hero-desc">
+      Timeline provides complete solutions for real-time GPS fleet management, vehicle security,
+      personal tracking, asset monitoring, and AI-powered dashcams.
+    </p>
+  </div>
+</section>
 
       {/* Filter Bar */}
       <div className="products-filter-bar">

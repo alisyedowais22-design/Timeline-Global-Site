@@ -19,7 +19,7 @@ const PageHero = () => (
     {/* Background image */}
     <div style={{
       position: 'absolute', inset: 0,
-      backgroundImage: 'url(/bn1.png)',
+      backgroundImage: 'url(https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&q=80)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       filter: 'brightness(0.35)',

@@ -1,7 +1,3 @@
-/* ================================================
-   ProductsPage.css — Grouped Category Layout
-   Timeline Telematics
-   ================================================ */
 
 .products-page {
   background: #ffffff;
@@ -14,12 +10,13 @@
   padding: 160px 0 60px;
   text-align: center;
   border-bottom: 1px solid #e5e7eb;
+  color: #fff;
 }
 .products-hero-title {
   font-size: 42px;
   font-weight: 700;
   padding-top: 130px;
-  color: #1f2937;
+  color: #fff;
   margin: 0 0 16px;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -33,7 +30,7 @@
 }
 .products-hero-desc {
   font-size: 16px;
-  color: #6b7280;
+  color: #fff;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;

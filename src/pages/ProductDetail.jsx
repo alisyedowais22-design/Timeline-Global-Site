@@ -915,7 +915,7 @@ Sent from Timeline Telematics Product Page`
             </div>
             <div className="pdp-cta-strip-actions">
               <button className="pdp-btn-primary" onClick={() => setQuoteOpen(true)}>Get a Quote</button>
-              <a href="tel:+923111122883" className="pdp-btn-outline">+92 311 1122 883</a>
+              <a href="tel:+971563863615" className="pdp-btn-outline">+971 56 386 3615</a>
             </div>
           </div>
         </div>

@@ -58,7 +58,7 @@ const DEVICES = [
 ];
 
 const INDUSTRIES = [
-  { label: 'Logistics & Courier', slug: 'logistics-courier' },
+  { label: 'Logistics & Courier', slug: 'logistics' },
   { label: 'Public Transport',    slug: 'public-transport'  },
   { label: 'Oil & Gas',           slug: 'oil-gas'           },
   { label: 'Construction',        slug: 'construction'      },
