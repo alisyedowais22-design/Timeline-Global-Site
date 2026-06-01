@@ -317,7 +317,9 @@ const RegionsSection = () => (
     <span style={{ fontSize: '52px', display: 'block', marginBottom: '16px' }}>{r.flag}</span>
     <h3 style={{ fontFamily: P, fontWeight: 700, fontSize: '20px', color: NAVY, marginBottom: '8px' }}>{r.name}</h3>
     <p style={{ fontSize: '12px', color: '#000000', fontFamily: P, marginBottom: '16px' }}>{r.offices}</p>
-    <span style={{ fontSize: '10px', fontWeight: 700, padding: '4px 14px', letterSpacing: '1px', background: 'rgba(200,16,46,0.08)', color: RED, textTransform: 'uppercase', fontFamily: P }}>● Live</span>
+    <span style={{ fontSize: '10px', fontWeight: 700, padding: '4px 14px', letterSpacing: '1px', background: 'rgba(200,16,46,0.08)', color: RED, textTransform: 'uppercase', fontFamily: P }}>
+  {r.code === 'PK' ? '● Live' : '● Coming Soon'}
+</span>
   </div>
 </div>
           </Reveal>

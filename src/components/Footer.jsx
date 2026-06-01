@@ -115,8 +115,8 @@ const Footer = () => (
             </h4>
             {[
               { Icon: Phone,  text: '+971 56 386 3615',              href: 'tel:+97156386361' },
-              { Icon: Mail,   text: 'support@timelinetelematics.me', href: 'mailto:support@timelinetelematics.me' },
-              { Icon: MapPin, text: 'Karachi, Pakistan',             href: '#' },
+              { Icon: Mail,   text: 'info@timelinetelematics.com', href: 'mailto:info@timelinetelematics.com' },
+              { Icon: MapPin, text: 'Silicon Oasis, Business Center, Dubai, UAE',             href: '#' },
             ].map(({ Icon, text, href }) => (
               <a key={text} href={href}
                 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748b', fontSize: '13.5px', padding: '5px 0', textDecoration: 'none', transition: 'color 0.2s' }}

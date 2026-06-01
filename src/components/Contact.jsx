@@ -230,7 +230,7 @@ const Contact = () => {
                   <Field label="Email Address" placeholder="john@company.com" required type="email" value={form.email} onChange={set('email')} error={errors.email} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row">
-                  <Field label="Phone Number" placeholder="+92 300 0000000" value={form.phone}   onChange={set('phone')}   error={errors.phone} />
+                  <Field label="Phone Number" placeholder="+971 00 0000000" value={form.phone}   onChange={set('phone')}   error={errors.phone} />
                   <Field label="Company"      placeholder="Your Company"    value={form.company} onChange={set('company')} error={errors.company} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
