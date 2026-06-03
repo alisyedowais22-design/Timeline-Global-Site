@@ -1,49 +1,264 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Youtube,
+  Mail,
+  Phone,
+  MessageCircle,
+  MapPin,
+} from 'lucide-react';
 
-const BRANCH_REGIONS = [
-  { code: 'PK', name: 'Pakistan',    flag: '🇵🇰', href: 'https://website.teletix.pk/', status: 'live' },
-  { code: 'ME', name: 'Middle East', flag: '🇦🇪', href: null,                           status: 'coming-soon' },
-  { code: 'EU', name: 'Europe',      flag: '🇪🇺', href: null,                           status: 'coming-soon' },
+const RED = '#E52B2E';
+const DARK = '#111827';
+const TEXT = '#9CA3AF';
+const MUTED = '#6B7280';
+const P = "'Poppins', sans-serif";
+
+const QUICK_LINKS = [
+  { label: 'Home', to: '/' },
+  { label: 'Solutions', to: '/solutions' },
+  { label: 'Case Studies', to: '/case-studies' },
+  { label: 'Products', to: '/products' },
+  { label: 'About', to: '/about' },
+  { label: 'Contact', to: '/contact' },
 ];
 
-const SOLUTIONS_LINKS = [
-  { label: 'Logistics & Courier', to: '/solutions#logistics' },
-  { label: 'Public Transport',    to: '/solutions#public-transport' },
-  { label: 'Oil & Gas',           to: '/solutions#oil-gas' },
-  { label: 'Construction',        to: '/solutions#construction' },
-  { label: 'Healthcare',          to: '/solutions#healthcare' },
-  { label: 'Government',          to: '/solutions#government' },
-  { label: 'Agriculture',         to: '/solutions#agriculture' },
+const PRODUCT_LINKS = [
+  { label: 'Fleet GPS Trackers', to: '/products' },
+  { label: 'AI Dashcams', to: '/products' },
+  { label: 'Asset Trackers', to: '/products' },
+  { label: 'IoT Gateways', to: '/products' },
+  { label: 'Smart Cargo Monitoring', to: '/products' },
 ];
+
+const SOCIALS = [
+  { Icon: Facebook, href: '#', label: 'Facebook' },
+  { Icon: Twitter, href: '#', label: 'Twitter' },
+  { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { Icon: Youtube, href: '#', label: 'YouTube' },
+];
+
+const FooterHeading = ({ children }) => (
+  <h4
+    style={{
+      color: '#ffffff',
+      fontSize: '12px',
+      fontWeight: 900,
+      letterSpacing: '3.2px',
+      textTransform: 'uppercase',
+      margin: '0 0 22px',
+      paddingBottom: '14px',
+      borderBottom: `1px solid rgba(229,43,46,0.55)`,
+      fontFamily: P,
+    }}
+  >
+    {children}
+  </h4>
+);
+
+const FooterLink = ({ to, children }) => (
+  <Link
+    to={to}
+    style={{
+      display: 'block',
+      color: TEXT,
+      fontSize: '14px',
+      fontWeight: 400,
+      padding: '6px 0',
+      lineHeight: '1.55',
+      textDecoration: 'none',
+      transition: 'all 0.25s ease',
+      fontFamily: P,
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.color = RED;
+      e.currentTarget.style.transform = 'translateX(4px)';
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.color = TEXT;
+      e.currentTarget.style.transform = 'translateX(0)';
+    }}
+  >
+    {children}
+  </Link>
+);
+
+const ContactItem = ({ Icon, label, children, href }) => {
+  const content = (
+    <>
+      <div
+        style={{
+          width: '34px',
+          height: '34px',
+          borderRadius: '9px',
+          background: 'rgba(229,43,46,0.13)',
+          color: RED,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexShrink: 0,
+        }}
+      >
+        <Icon size={15} />
+      </div>
+
+      <div>
+        <div
+          style={{
+            color: MUTED,
+            fontSize: '9.5px',
+            fontWeight: 900,
+            letterSpacing: '2.1px',
+            textTransform: 'uppercase',
+            marginBottom: '4px',
+            fontFamily: P,
+          }}
+        >
+          {label}
+        </div>
+
+        <div
+          style={{
+            color: '#E5E7EB',
+            fontSize: '13.5px',
+            fontWeight: 600,
+            lineHeight: '1.55',
+            fontFamily: P,
+          }}
+        >
+          {children}
+        </div>
+      </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        style={{
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: '12px',
+          textDecoration: 'none',
+          marginBottom: '16px',
+        }}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'flex-start',
+        gap: '12px',
+        marginBottom: '16px',
+      }}
+    >
+      {content}
+    </div>
+  );
+};
 
 const Footer = () => (
-  <footer style={{ background: '#0f172a', color: '#94a3b8', padding: '72px 24px 0' }}>
-    <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '48px', marginBottom: '56px',
-      }}>
+  <footer
+    style={{
+      background: DARK,
+      color: TEXT,
+      fontFamily: P,
+      position: 'relative',
+      overflow: 'hidden',
+    }}
+  >
+    <div
+      style={{
+        height: '8px',
+        background: RED,
+      }}
+    />
 
+    <div
+      style={{
+        maxWidth: '1280px',
+        margin: '0 auto',
+        padding: '72px 32px 28px',
+      }}
+    >
+      <div
+        className="footer-grid"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1.12fr 0.85fr 0.95fr 1.25fr',
+          gap: '52px',
+          alignItems: 'start',
+        }}
+      >
         {/* Brand */}
         <div>
-          <div style={{ marginBottom: '20px' }}>
-            <img src="/TimelineLogoWhite.png" alt="Timeline Telematics" style={{ height: '122px', width: 'auto' }} />
-          </div>
-          <p style={{ fontSize: '14px', lineHeight: '1.7', marginBottom: '24px', color: '#64748b' }}>
-            Vehicles. Assets. People. In motion, every second. Global fleet intelligence platform trusted by 25,000+ operators.
-          </p>
-          <div style={{ display: 'flex', gap: '12px' }}>
-            {[Facebook, Twitter, Linkedin, Youtube].map((Icon, i) => (
-              <a key={i} href="#" style={{
-                width: '36px', height: '36px', background: 'rgba(255,255,255,0.05)',
-                borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: '#64748b', transition: 'all 0.2s', textDecoration: 'none',
+          <Link to="/" style={{ display: 'inline-block', marginBottom: '24px' }}>
+            <img
+              src="/TimelineLogoWhite.png"
+              alt="Timeline Telematics"
+              style={{
+                width: '198px',
+                height: 'auto',
+                display: 'block',
               }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(232,49,42,0.15)'; e.currentTarget.style.color = '#E8312A'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.color = '#64748b'; }}
+            />
+          </Link>
+
+          <p
+            style={{
+              color: TEXT,
+              fontSize: '13.8px',
+              lineHeight: '1.8',
+              margin: '0 0 24px',
+              maxWidth: '315px',
+              fontFamily: P,
+            }}
+          >
+            Global fleet intelligence platform delivering advanced tracking,
+            IoT monitoring, asset visibility, and smart telematics solutions
+            for modern operations.
+          </p>
+
+          <div style={{ display: 'flex', gap: '10px' }}>
+            {SOCIALS.map(({ Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                style={{
+                  width: '37px',
+                  height: '37px',
+                  borderRadius: '8px',
+                  background: 'rgba(255,255,255,0.07)',
+                  border: '1px solid rgba(255,255,255,0.11)',
+                  color: '#D1D5DB',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none',
+                  transition: 'all 0.25s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(229,43,46,0.18)';
+                  e.currentTarget.style.borderColor = 'rgba(229,43,46,0.5)';
+                  e.currentTarget.style.color = RED;
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.07)';
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.11)';
+                  e.currentTarget.style.color = '#D1D5DB';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
               >
                 <Icon size={16} />
               </a>
@@ -51,106 +266,177 @@ const Footer = () => (
           </div>
         </div>
 
-        {/* Solutions */}
-        <div>
-          <h4 style={{ color: '#fff', fontWeight: '700', fontSize: '14px', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '20px' }}>
-            Solutions
-          </h4>
-          {SOLUTIONS_LINKS.map(s => (
-            <Link key={s.label} to={s.to}
-              style={{ display: 'block', color: '#64748b', fontSize: '14px', padding: '5px 0', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.color = '#E8312A'}
-              onMouseLeave={e => e.currentTarget.style.color = '#64748b'}
-            >
-              {s.label}
-            </Link>
-          ))}
-        </div>
-
         {/* Quick Links */}
         <div>
-          <h4 style={{ color: '#fff', fontWeight: '700', fontSize: '14px', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '20px' }}>
-            Quick Links
-          </h4>
-          {[
-            { label: 'Home',         to: '/' },
-            { label: 'About Us',     to: '/about' },
-            { label: 'Our Products', to: '/our-products' },
-            { label: 'Case Studies', to: '/case-studies' },
-            { label: 'Contact',      to: '/contact' },
-          ].map(item => (
-            <Link key={item.label} to={item.to}
-              style={{ display: 'block', color: '#64748b', fontSize: '14px', padding: '5px 0', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.color = '#E8312A'}
-              onMouseLeave={e => e.currentTarget.style.color = '#64748b'}
-            >
+          <FooterHeading>Quick Links</FooterHeading>
+          {QUICK_LINKS.map((item) => (
+            <FooterLink key={item.label} to={item.to}>
               {item.label}
-            </Link>
+            </FooterLink>
           ))}
         </div>
 
-        {/* Regional + Contact */}
+        {/* Products */}
         <div>
-          <h4 style={{ color: '#fff', fontWeight: '700', fontSize: '14px', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '20px' }}>
-            Regional Sites
-          </h4>
-          {BRANCH_REGIONS.map(r => (
-            r.status === 'live'
-              ? <a key={r.code} href={r.href} target="_blank" rel="noopener noreferrer"
-                  style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748b', fontSize: '14px', padding: '6px 0', textDecoration: 'none', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#E8312A'}
-                  onMouseLeave={e => e.currentTarget.style.color = '#64748b'}
-                >
-                  <span>{r.flag}</span> {r.name}
-                </a>
-              : <div key={r.code} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748b', fontSize: '14px', padding: '6px 0', opacity: 0.5 }}>
-                  <span>{r.flag}</span> {r.name}
-                  <span style={{ fontSize: '9px', fontWeight: '700', background: 'rgba(251,191,36,0.15)', color: '#fbbf24', padding: '1px 6px', borderRadius: '999px', textTransform: 'uppercase' }}>Soon</span>
-                </div>
+          <FooterHeading>Products</FooterHeading>
+          {PRODUCT_LINKS.map((item) => (
+            <FooterLink key={item.label} to={item.to}>
+              {item.label}
+            </FooterLink>
           ))}
+        </div>
 
-          <div style={{ marginTop: '28px' }}>
-            <h4 style={{ color: '#fff', fontWeight: '700', fontSize: '14px', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '16px' }}>
-              Contact
-            </h4>
-            {[
-              { Icon: Phone,  text: '+971 56 386 3615',              href: 'tel:+97156386361' },
-              { Icon: Mail,   text: 'info@timelinetelematics.com', href: 'mailto:info@timelinetelematics.com' },
-              { Icon: MapPin, text: 'Silicon Oasis, Business Center, Dubai, UAE',             href: '#' },
-            ].map(({ Icon, text, href }) => (
-              <a key={text} href={href}
-                style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748b', fontSize: '13.5px', padding: '5px 0', textDecoration: 'none', transition: 'color 0.2s' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#E8312A'}
-                onMouseLeave={e => e.currentTarget.style.color = '#64748b'}
+        {/* Contact */}
+        <div>
+          <FooterHeading>Contact Us</FooterHeading>
+
+          <ContactItem
+            Icon={Mail}
+            label="Email"
+            href="mailto:info@timelinetelematics.com"
+          >
+            info@timelinetelematics.com
+          </ContactItem>
+
+          <ContactItem Icon={Phone} label="Phone" href="tel:+971563863615">
+            +971 56 386 3615
+          </ContactItem>
+
+          <ContactItem
+            Icon={MessageCircle}
+            label="WhatsApp"
+            href="https://wa.me/971563863615"
+          >
+            Chat Now
+          </ContactItem>
+
+          <ContactItem Icon={MapPin} label="Dubai Office">
+            Silicon Oasis, Business Center, Dubai, UAE
+          </ContactItem>
+
+          <div style={{ marginTop: '18px' }}>
+            <FooterHeading>Regional Sites</FooterHeading>
+
+            <div style={{ display: 'grid', gap: '8px' }}>
+              <a
+                href="https://website.teletix.pk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '9px',
+                  color: '#D1D5DB',
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  fontFamily: P,
+                }}
               >
-                <Icon size={13} /> {text}
+                🇵🇰 Pakistan <span style={{ color: '#22C55E' }}>● Live</span>
               </a>
-            ))}
+
+              <a
+                href="https://global.timelinetelematics.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '9px',
+                  color: '#D1D5DB',
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  fontFamily: P,
+                }}
+              >
+                🇦🇪 Middle East <span style={{ color: '#22C55E' }}>● Live</span>
+              </a>
+
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '9px',
+                  color: MUTED,
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  fontFamily: P,
+                }}
+              >
+                🇪🇺 Europe <span style={{ color: '#FBBF24' }}>● Coming Soon</span>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
 
-      <div style={{
-        borderTop: '1px solid rgba(255,255,255,0.06)', padding: '24px 0',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px',
-      }}>
-        <p style={{ fontSize: '13px', color: '#475569' }}>
+      <div
+        style={{
+          marginTop: '52px',
+          paddingTop: '24px',
+          borderTop: '1px solid rgba(255,255,255,0.10)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '18px',
+          flexWrap: 'wrap',
+        }}
+      >
+        <p
+          style={{
+            margin: 0,
+            color: MUTED,
+            fontSize: '13px',
+            fontFamily: P,
+          }}
+        >
           © {new Date().getFullYear()} Timeline Telematics. All rights reserved.
         </p>
-        <div style={{ display: 'flex', gap: '24px' }}>
-          {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(item => (
-            <a key={item} href="#"
-              style={{ color: '#475569', fontSize: '13px', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.color = '#E8312A'}
-              onMouseLeave={e => e.currentTarget.style.color = '#475569'}
-            >
-              {item}
-            </a>
-          ))}
+
+        <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+          <a
+            href="#"
+            style={{
+              color: MUTED,
+              fontSize: '13px',
+              textDecoration: 'none',
+              fontFamily: P,
+            }}
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            href="#"
+            style={{
+              color: MUTED,
+              fontSize: '13px',
+              textDecoration: 'none',
+              fontFamily: P,
+            }}
+          >
+            Terms of Service
+          </a>
         </div>
       </div>
     </div>
+
+    <style>{`
+      @media (max-width: 1050px) {
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .footer-grid {
+          grid-template-columns: 1fr !important;
+          gap: 38px !important;
+        }
+      }
+    `}</style>
   </footer>
 );
 

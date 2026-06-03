@@ -16,7 +16,7 @@ const CaseStudiesPage = () => {
         <div style={{
           padding: '172px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden',
         }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80)', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.3)' }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.3)' }} />
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{
               display: 'inline-block', background: 'rgba(232,49,42,0.15)', color: '#fca5a5',
