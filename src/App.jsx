@@ -10,6 +10,7 @@ import IndustryDetailPage  from './pages/IndustryDetailPage';
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
 import ProductsPage        from './pages/ProductsPage';
 import ProductDetail       from './pages/ProductDetail';
+import AccessoriesPage from './pages/AccessoriesPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -55,6 +56,7 @@ function App() {
         <Route path="/industries/:slug"    element={<IndustryDetailPage />} />
         <Route path="/products"            element={<ProductsPage />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
+        <Route path="/accessories"         element={<AccessoriesPage />} />
         <Route path="*"                    element={<HomePage />} />
       </Routes>
       <WAButton />
