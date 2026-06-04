@@ -572,7 +572,7 @@ const AccessoriesPage = () => {
             justifyContent: 'center',
             overflow: 'hidden',
             background:
-              'linear-gradient(rgba(5, 8, 14, 0.70), rgba(5, 8, 14, 0.72)), url("/accessories/accessories-hero.avif")',
+              'linear-gradient(rgba(5, 8, 14, 0.70), rgba(5, 8, 14, 0.72)), url("/accessories/accessories-hero.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             color: '#fff',
@@ -584,7 +584,7 @@ const AccessoriesPage = () => {
               position: 'absolute',
               inset: 0,
               background:
-                'linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(8,12,20,0.58) 45%, rgba(0,0,0,0.55) 100%)',
+             'linear-gradient(rgba(5, 8, 14, 0.28), rgba(5, 8, 14, 0.34)), url("/accessories/accessories-hero.jpg")',
               zIndex: 1,
             }}
           />
