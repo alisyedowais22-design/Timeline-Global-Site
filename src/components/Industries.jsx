@@ -86,7 +86,7 @@ const Industries = () => {
     <section id="industries" style={{ background: '#111', overflow: 'hidden' }}>
 
       {/* Section header */}
-      <div style={{ textAlign: 'center', padding: '60px 24px 40px', background: '#fff' }}>
+      <div className="industries-section-header" style={{ textAlign: 'center', padding: '60px 24px 40px', background: '#fff' }}>
         <div style={{
           display: 'inline-block', background: '#fef2f2', color: '#E8312A',
           fontSize: '12px', fontWeight: '700', padding: '4px 14px', borderRadius: '999px',
@@ -104,7 +104,7 @@ const Industries = () => {
       </div>
 
       {/* ── Accordion strip — flex, hovered item grows ── */}
-      <div style={{
+      <div className="industries-accordion-strip" style={{
         display: 'flex',
         height: '460px',
         overflow: 'hidden',
@@ -114,6 +114,7 @@ const Industries = () => {
           return (
             <div
               key={i}
+              className="industry-accordion-card"
               onClick={() => navigate(`/industries/${ind.slug}`)}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
@@ -121,14 +122,13 @@ const Industries = () => {
                 position: 'relative',
                 overflow: 'hidden',
                 cursor: 'pointer',
-                /* flex-grow: hovered item takes much more space */
                 flex: isHovered ? '4 1 0%' : '1 1 0%',
                 transition: 'flex 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
                 borderRight: i < INDUSTRIES.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
               }}
             >
               {/* Background image */}
-              <div style={{
+              <div className="industry-card-bg" style={{
                 position: 'absolute', inset: 0,
                 backgroundImage: `url(${ind.img})`,
                 backgroundSize: 'cover',
@@ -139,14 +139,14 @@ const Industries = () => {
               }} />
 
               {/* Dark overlay — lighter on hover */}
-              <div style={{
+              <div className="industry-card-overlay" style={{
                 position: 'absolute', inset: 0,
                 background: isHovered ? 'rgba(0,0,0,0.45)' : 'rgba(0,0,0,0.58)',
                 transition: 'background 0.4s ease',
               }} />
 
               {/* Red bottom accent on hover */}
-              <div style={{
+              <div className="industry-card-accent" style={{
                 position: 'absolute', bottom: 0, left: 0, right: 0,
                 height: '3px',
                 background: '#E8312A',
@@ -156,7 +156,7 @@ const Industries = () => {
               }} />
 
               {/* Content */}
-              <div style={{
+              <div className="industry-card-content" style={{
                 position: 'relative', zIndex: 2,
                 padding: '28px 20px 28px',
                 display: 'flex',
@@ -165,7 +165,7 @@ const Industries = () => {
                 height: '100%',
               }}>
                 {/* Icon circle */}
-                <div style={{
+                <div className="industry-icon-circle" style={{
                   width: 56, height: 56, borderRadius: '50%',
                   border: `1.5px solid ${isHovered ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.4)'}`,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -178,7 +178,7 @@ const Industries = () => {
                 </div>
 
                 {/* Name */}
-                <h3 style={{
+                <h3 className="industry-card-title" style={{
                   fontFamily: 'Oswald, sans-serif',
                   fontSize: isHovered ? '22px' : '16px',
                   fontWeight: '700',
@@ -193,7 +193,7 @@ const Industries = () => {
                 </h3>
 
                 {/* Desc — only visible on hover */}
-                <p style={{
+                <p className="industry-card-desc" style={{
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '12px',
                   color: 'rgba(255,255,255,0.75)',
@@ -208,7 +208,7 @@ const Industries = () => {
                 </p>
 
                 {/* Learn More — only on hover */}
-                <div style={{
+                <div className="industry-card-learn" style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,
                   color: '#fff',
                   fontFamily: 'Oswald, sans-serif',
@@ -237,6 +237,117 @@ const Industries = () => {
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        @media (max-width: 768px) {
+          .industries-section-header {
+            padding: 42px 18px 28px !important;
+          }
+
+          .industries-accordion-strip {
+            display: flex !important;
+            flex-direction: column !important;
+            height: auto !important;
+            overflow: visible !important;
+          }
+
+          .industry-accordion-card {
+            flex: none !important;
+            width: 100% !important;
+            height: 175px !important;
+            border-right: none !important;
+            border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+          }
+
+          .industry-card-bg {
+            transform: scale(1) !important;
+          }
+
+          .industry-card-overlay {
+            background: linear-gradient(
+              90deg,
+              rgba(0,0,0,0.82) 0%,
+              rgba(0,0,0,0.58) 55%,
+              rgba(0,0,0,0.32) 100%
+            ) !important;
+          }
+
+          .industry-card-accent {
+            top: 0 !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: auto !important;
+            width: 4px !important;
+            height: 100% !important;
+            transform: scaleX(1) !important;
+          }
+
+          .industry-card-content {
+            padding: 20px 22px 20px 24px !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+          }
+
+          .industry-icon-circle {
+            width: 46px !important;
+            height: 46px !important;
+            margin-bottom: 10px !important;
+            background: rgba(232,49,42,0.28) !important;
+            border-color: rgba(255,255,255,0.75) !important;
+          }
+
+          .industry-icon-circle svg {
+            width: 28px !important;
+            height: 28px !important;
+          }
+
+          .industry-card-title {
+            font-size: 23px !important;
+            line-height: 1.12 !important;
+            margin-bottom: 7px !important;
+            white-space: normal !important;
+            max-width: 250px !important;
+          }
+
+          .industry-card-desc {
+            opacity: 1 !important;
+            transform: none !important;
+            margin-bottom: 11px !important;
+            max-width: 260px !important;
+            font-size: 12px !important;
+            line-height: 1.55 !important;
+            display: block !important;
+          }
+
+          .industry-card-learn {
+            opacity: 1 !important;
+            transform: none !important;
+            font-size: 12px !important;
+          }
+        }
+
+        @media (max-width: 420px) {
+          .industry-accordion-card {
+            height: 165px !important;
+          }
+
+          .industry-card-content {
+            padding: 18px 18px 18px 22px !important;
+          }
+
+          .industry-card-title {
+            font-size: 21px !important;
+            max-width: 230px !important;
+          }
+
+          .industry-card-desc {
+            font-size: 11.5px !important;
+            max-width: 220px !important;
+          }
+
+          .industry-card-learn {
+            font-size: 11.5px !important;
+          }
+        }
       `}</style>
     </section>
   );
