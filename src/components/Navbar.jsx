@@ -10,22 +10,22 @@ const DEVICES = [
     category: 'Vehicle Trackers',
     items: [
       { label: 'GT06N 4G', desc: 'Classic Upgraded',     to: '/products/gt06n-4g' },
-      { label: 'VG03',     desc: 'Discreet Tracking',    to: '/products/vg03'     },
-      { label: 'VL103D',   desc: 'Tiny Device',          to: '/products/vl103d'   },
-      { label: 'VL103M',   desc: 'Minimal Form',         to: '/products/vl103m'   },
-      { label: 'VL110C',   desc: 'Any Vehicle',          to: '/products/vl110c'   },
-      { label: 'VL802',    desc: 'More Visibility',      to: '/products/vl802'    },
-      { label: 'VL808',    desc: 'Intelligent Tracking', to: '/products/vl808'    },
-      { label: 'X3',       desc: 'Voice Tracker',        to: '/products/x3'       },
-      { label: 'GT06N',    desc: 'The Classic',          to: '/products/gt06n'    },
+      { label: 'VG03',     desc: 'Discreet Tracking',    to: '/products/vg03' },
+      { label: 'VL103D',   desc: 'Tiny Device',          to: '/products/vl103d' },
+      { label: 'VL103M',   desc: 'Minimal Form',         to: '/products/vl103m' },
+      { label: 'VL110C',   desc: 'Any Vehicle',          to: '/products/vl110c' },
+      { label: 'VL802',    desc: 'More Visibility',      to: '/products/vl802' },
+      { label: 'VL808',    desc: 'Intelligent Tracking', to: '/products/vl808' },
+      { label: 'X3',       desc: 'Voice Tracker',        to: '/products/x3' },
+      { label: 'GT06N',    desc: 'The Classic',          to: '/products/gt06n' },
     ],
   },
   {
     category: 'AI Dashcams',
     items: [
-      { label: 'JC371',  desc: 'AI Dashcam with ADAS',     to: '/products/jc371'  },
-      { label: 'JC450',  desc: 'Multi-Channel AI Dashcam', to: '/products/jc450'  },
-      { label: 'JC261',  desc: 'Dual Camera AI Dashcam',   to: '/products/jc261'  },
+      { label: 'JC371',  desc: 'AI Dashcam with ADAS',     to: '/products/jc371' },
+      { label: 'JC450',  desc: 'Multi-Channel AI Dashcam', to: '/products/jc450' },
+      { label: 'JC261',  desc: 'Dual Camera AI Dashcam',   to: '/products/jc261' },
       { label: 'JC261P', desc: 'Pro AI Dashcam',           to: '/products/jc261p' },
       { label: 'JC400D', desc: '4G AI Dashcam',            to: '/products/jc400d' },
     ],
@@ -40,7 +40,7 @@ const DEVICES = [
     category: 'Asset Trackers',
     items: [
       { label: 'LL303PRO', desc: '5 Years Battery',  to: '/products/ll303pro' },
-      { label: 'LL301',    desc: 'Silent Protector', to: '/products/ll301'    },
+      { label: 'LL301',    desc: 'Silent Protector', to: '/products/ll301' },
     ],
   },
   {
@@ -65,16 +65,29 @@ const DEVICES = [
 
 const INDUSTRIES = [
   { label: 'Logistics & Courier', slug: 'logistics' },
-  { label: 'Public Transport',    slug: 'public-transport'  },
-  { label: 'Oil & Gas',           slug: 'oil-gas'           },
-  { label: 'Construction',        slug: 'construction'      },
-  { label: 'Healthcare',          slug: 'healthcare'        },
-  { label: 'Government',          slug: 'government'        },
-  { label: 'Agriculture',         slug: 'agriculture'       },
+  { label: 'Public Transport', slug: 'public-transport' },
+  { label: 'Oil & Gas', slug: 'oil-gas' },
+  { label: 'Construction', slug: 'construction' },
+  { label: 'Healthcare', slug: 'healthcare' },
+  { label: 'Government', slug: 'government' },
+  { label: 'Agriculture', slug: 'agriculture' },
 ];
 
-/* ── Hover dropdown wrapper — stays open while mouse is over button OR menu ── */
-const HoverDropdown = ({ label, to, children }) => {
+const VEHICLE_SOLUTIONS = [
+  { label: 'Bus Monitoring Solution', slug: 'bus-monitoring-solution' },
+  { label: 'Cargo Truck Solution', slug: 'cargo-truck-solution' },
+  { label: 'Oil Truck Solution', slug: 'oil-truck-solution' },
+  { label: 'School Bus Solution', slug: 'school-bus-solution' },
+  { label: 'Train Monitoring Solution', slug: 'train-monitoring-solution' },
+  { label: 'Police Car Solution', slug: 'police-car-solution' },
+  { label: 'Police Car Solution System', slug: 'police-car-system' },
+  { label: 'Private Car/SUV Solution', slug: 'private-car-suv-solution' },
+  { label: 'Motorcycle Solution', slug: 'motorcycle-solution' },
+  { label: 'Military Vehicle Solution', slug: 'military-vehicle-solution' },
+  { label: 'Fire Truck Solution', slug: 'fire-truck-solution' },
+];
+
+const HoverDropdown = ({ label, to, children, active }) => {
   const [open, setOpen] = useState(false);
   const timerRef = useRef(null);
   const navigate = useNavigate();
@@ -107,10 +120,11 @@ const HoverDropdown = ({ label, to, children }) => {
           fontSize: '13.5px',
           fontFamily: 'Poppins, sans-serif',
           fontWeight: '600',
-          color: open ? '#E8312A' : '#374151',
+          color: open || active ? '#E8312A' : '#374151',
           borderRadius: '7px',
           background: 'none',
           border: 'none',
+          borderBottom: active ? '2px solid #E8312A' : '2px solid transparent',
           cursor: 'pointer',
           transition: 'color 0.2s',
         }}
@@ -143,22 +157,42 @@ const HoverDropdown = ({ label, to, children }) => {
 };
 
 const Navbar = () => {
-  const [scrolled, setScrolled]             = useState(false);
-  const [mobileOpen, setMobileOpen]         = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProdOpen, setMobileProdOpen] = useState(false);
-  const [mobileSolOpen,  setMobileSolOpen]  = useState(false);
+  const [mobileSolOpen, setMobileSolOpen] = useState(false);
+  const [mobileIndOpen, setMobileIndOpen] = useState(false);
+
   const location = useLocation();
 
   const isActive = (to) => location.pathname === to;
 
+  const isSolutionsActive =
+    location.pathname === '/solutions' ||
+    location.pathname.startsWith('/vehicle-solutions') ||
+    location.pathname.startsWith('/solutions/');
+
+  const isIndustriesActive =
+    location.pathname.startsWith('/industries');
+
+  const isProductsActive =
+    location.pathname === '/products' ||
+    location.pathname.startsWith('/products') ||
+    location.pathname === '/accessories';
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll);
+    onScroll();
+
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
     setMobileOpen(false);
+    setMobileProdOpen(false);
+    setMobileSolOpen(false);
+    setMobileIndOpen(false);
   }, [location.pathname]);
 
   const linkStyle = (to) => ({
@@ -172,6 +206,42 @@ const Navbar = () => {
     transition: 'color 0.2s',
     borderBottom: isActive(to) ? '2px solid #E8312A' : '2px solid transparent',
   });
+
+  const dropdownLinkStyle = {
+    display: 'block',
+    padding: '8px 9px',
+    borderRadius: 8,
+    textDecoration: 'none',
+    transition: 'background 0.15s',
+  };
+
+  const dropdownTextStyle = {
+    fontSize: '13px',
+    fontWeight: '600',
+    color: '#111827',
+    fontFamily: 'Poppins, sans-serif',
+    lineHeight: '1.35',
+  };
+
+  const sectionHeadingStyle = {
+    fontSize: '10.5px',
+    fontWeight: '700',
+    letterSpacing: '0.08em',
+    color: '#9ca3af',
+    fontFamily: 'Poppins, sans-serif',
+    textTransform: 'uppercase',
+    paddingBottom: 8,
+    marginBottom: 8,
+    borderBottom: '1px solid #f3f4f6',
+  };
+
+  const hoverBg = (e) => {
+    e.currentTarget.style.background = '#fef2f2';
+  };
+
+  const leaveBg = (e) => {
+    e.currentTarget.style.background = 'transparent';
+  };
 
   return (
     <>
@@ -199,7 +269,6 @@ const Navbar = () => {
             height: '72px',
           }}
         >
-          {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
             <img
               src="/Timelinelogo.png"
@@ -208,7 +277,6 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Desktop nav */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }} className="desktop-nav">
             <Link
               to="/"
@@ -223,21 +291,59 @@ const Navbar = () => {
               Home
             </Link>
 
-            <HoverDropdown label="Solutions" to="/solutions">
-              <div style={{ padding: '12px 16px', width: 240 }}>
+            <HoverDropdown label="Solutions" to="/vehicle-solutions" active={isSolutionsActive}>
+              <div style={{ padding: '14px 16px', width: 520, maxWidth: '92vw' }}>
+                <div style={sectionHeadingStyle}>
+                  Vehicle Monitoring Systems
+                </div>
+
                 <div
                   style={{
-                    fontSize: '10.5px',
-                    fontWeight: '700',
-                    letterSpacing: '0.08em',
-                    color: '#9ca3af',
-                    fontFamily: 'Poppins, sans-serif',
-                    textTransform: 'uppercase',
-                    paddingBottom: 8,
-                    marginBottom: 8,
-                    borderBottom: '1px solid #f3f4f6',
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+                    gap: '3px 10px',
                   }}
                 >
+                  {VEHICLE_SOLUTIONS.map((item) => (
+                    <Link
+                      key={item.slug}
+                      to={`/vehicle-solutions/${item.slug}`}
+                      style={dropdownLinkStyle}
+                      onMouseEnter={hoverBg}
+                      onMouseLeave={leaveBg}
+                    >
+                      <div style={dropdownTextStyle}>{item.label}</div>
+                    </Link>
+                  ))}
+                </div>
+
+                <div
+                  style={{
+                    marginTop: 10,
+                    paddingTop: 10,
+                    borderTop: '1px solid #f3f4f6',
+                    textAlign: 'center',
+                  }}
+                >
+                  <Link
+                    to="/vehicle-solutions"
+                    style={{
+                      fontSize: '12.5px',
+                      fontWeight: '700',
+                      color: '#E8312A',
+                      fontFamily: 'Poppins, sans-serif',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    View All Vehicle Solutions →
+                  </Link>
+                </div>
+              </div>
+            </HoverDropdown>
+
+            <HoverDropdown label="Industries" to="/solutions" active={isIndustriesActive}>
+              <div style={{ padding: '14px 16px', width: 280, maxWidth: '92vw' }}>
+                <div style={sectionHeadingStyle}>
                   Industries We Serve
                 </div>
 
@@ -245,30 +351,11 @@ const Navbar = () => {
                   <Link
                     key={ind.slug}
                     to={`/industries/${ind.slug}`}
-                    style={{
-                      display: 'block',
-                      padding: '7px 8px',
-                      borderRadius: 8,
-                      textDecoration: 'none',
-                      transition: 'background 0.15s',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#fef2f2';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'transparent';
-                    }}
+                    style={dropdownLinkStyle}
+                    onMouseEnter={hoverBg}
+                    onMouseLeave={leaveBg}
                   >
-                    <div
-                      style={{
-                        fontSize: '13px',
-                        fontWeight: '600',
-                        color: '#111827',
-                        fontFamily: 'Poppins, sans-serif',
-                      }}
-                    >
-                      {ind.label}
-                    </div>
+                    <div style={dropdownTextStyle}>{ind.label}</div>
                   </Link>
                 ))}
 
@@ -290,7 +377,7 @@ const Navbar = () => {
                       textDecoration: 'none',
                     }}
                   >
-                    View All Solutions →
+                    View All Industries →
                   </Link>
                 </div>
               </div>
@@ -309,21 +396,9 @@ const Navbar = () => {
               Case Studies
             </Link>
 
-            <HoverDropdown label="Products" to="/products">
+            <HoverDropdown label="Products" to="/products" active={isProductsActive}>
               <div style={{ padding: '12px 16px', width: 1040, maxWidth: '92vw' }}>
-                <div
-                  style={{
-                    fontSize: '10.5px',
-                    fontWeight: '700',
-                    letterSpacing: '0.08em',
-                    color: '#9ca3af',
-                    fontFamily: 'Poppins, sans-serif',
-                    textTransform: 'uppercase',
-                    paddingBottom: 8,
-                    marginBottom: 10,
-                    borderBottom: '1px solid #f3f4f6',
-                  }}
-                >
+                <div style={sectionHeadingStyle}>
                   Our Hardware Products
                 </div>
 
@@ -363,12 +438,8 @@ const Navbar = () => {
                             textDecoration: 'none',
                             transition: 'background 0.15s',
                           }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = '#fef2f2';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'transparent';
-                          }}
+                          onMouseEnter={hoverBg}
+                          onMouseLeave={leaveBg}
                         >
                           <div
                             style={{
@@ -449,7 +520,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* CTA + hamburger */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Link
               to="/contact"
@@ -493,9 +563,16 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {mobileOpen && (
-          <div style={{ background: '#fff', borderTop: '1px solid #f3f4f6', padding: '12px 24px 20px' }}>
+          <div
+            style={{
+              background: '#fff',
+              borderTop: '1px solid #f3f4f6',
+              padding: '12px 24px 20px',
+              maxHeight: 'calc(100vh - 72px)',
+              overflowY: 'auto',
+            }}
+          >
             <Link
               to="/"
               style={{
@@ -524,7 +601,7 @@ const Navbar = () => {
                   fontSize: '15px',
                   fontWeight: '600',
                   fontFamily: 'Poppins, sans-serif',
-                  color: '#374151',
+                  color: isSolutionsActive ? '#E8312A' : '#374151',
                   background: 'none',
                   border: 'none',
                   borderBottom: '1px solid #f3f4f6',
@@ -536,13 +613,80 @@ const Navbar = () => {
 
               {mobileSolOpen && (
                 <div style={{ paddingLeft: '12px' }}>
+                  {VEHICLE_SOLUTIONS.map((item) => (
+                    <Link
+                      key={item.slug}
+                      to={`/vehicle-solutions/${item.slug}`}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMobileSolOpen(false);
+                      }}
+                      style={{
+                        display: 'block',
+                        padding: '9px 0',
+                        fontSize: '13.5px',
+                        fontWeight: '600',
+                        color: '#374151',
+                        borderBottom: '1px solid #f9fafb',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+
+                  <Link
+                    to="/vehicle-solutions"
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setMobileSolOpen(false);
+                    }}
+                    style={{
+                      display: 'block',
+                      padding: '10px 0',
+                      fontSize: '13px',
+                      fontWeight: '700',
+                      color: '#E8312A',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    View All Vehicle Solutions →
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div>
+              <button
+                onClick={() => setMobileIndOpen(!mobileIndOpen)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  width: '100%',
+                  padding: '11px 0',
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  fontFamily: 'Poppins, sans-serif',
+                  color: isIndustriesActive ? '#E8312A' : '#374151',
+                  background: 'none',
+                  border: 'none',
+                  borderBottom: '1px solid #f3f4f6',
+                  cursor: 'pointer',
+                }}
+              >
+                Industries <ChevronDown />
+              </button>
+
+              {mobileIndOpen && (
+                <div style={{ paddingLeft: '12px' }}>
                   {INDUSTRIES.map((ind) => (
                     <Link
                       key={ind.slug}
                       to={`/industries/${ind.slug}`}
                       onClick={() => {
                         setMobileOpen(false);
-                        setMobileSolOpen(false);
+                        setMobileIndOpen(false);
                       }}
                       style={{
                         display: 'block',
@@ -562,7 +706,7 @@ const Navbar = () => {
                     to="/solutions"
                     onClick={() => {
                       setMobileOpen(false);
-                      setMobileSolOpen(false);
+                      setMobileIndOpen(false);
                     }}
                     style={{
                       display: 'block',
@@ -573,7 +717,7 @@ const Navbar = () => {
                       textDecoration: 'none',
                     }}
                   >
-                    View All Solutions →
+                    View All Industries →
                   </Link>
                 </div>
               )}
@@ -607,7 +751,7 @@ const Navbar = () => {
                   fontSize: '15px',
                   fontWeight: '600',
                   fontFamily: 'Poppins, sans-serif',
-                  color: '#374151',
+                  color: isProductsActive ? '#E8312A' : '#374151',
                   background: 'none',
                   border: 'none',
                   borderBottom: '1px solid #f3f4f6',

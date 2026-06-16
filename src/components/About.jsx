@@ -160,7 +160,7 @@ const CEO = () => (
             <div style={{ position: 'absolute', top: '16px', left: '-16px', width: '100%', height: '100%', background: RED, zIndex: 0 }} />
             <div style={{ position: 'relative', zIndex: 1, background: NAVY, overflow: 'hidden' }}>
               <div style={{ position: 'relative', height: '380px', overflow: 'hidden', background: `linear-gradient(160deg,#1a2f5a,${NAVY})` }}>
-                <img src="/M,AhsanNaeem.jpg" alt="Muhammad Ahsan Naeem"
+                <img src="/M,AhsanNaeem.png" alt="Muhammad Ahsan Naeem"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
                   onError={e => { e.currentTarget.style.display = 'none'; }}
                 />

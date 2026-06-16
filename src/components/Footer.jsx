@@ -319,7 +319,7 @@ const Footer = () => (
 
             <div style={{ display: 'grid', gap: '8px' }}>
               <a
-                href="https://website.teletix.pk/"
+                href="https://pk.timelinetelematics.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -337,7 +337,7 @@ const Footer = () => (
               </a>
 
               <a
-                href="https://global.timelinetelematics.com/"
+                href="https://ae.timelinetelematics.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

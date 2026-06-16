@@ -316,7 +316,7 @@ const CEOSection = () => (
                 }}
               >
                 <img
-                  src="/M,AhsanNaeem.jpg"
+                  src="/M,AhsanNaeem.png"
                   alt="Muhammad Ahsan Naeem"
                   style={{
                     width: '100%',
