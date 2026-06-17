@@ -683,6 +683,304 @@ const productDetails = {
   },
 };
 
+
+
+/* ─────────────────────────────────────────────────────────────
+   PRODUCT DATABASE
+   Images path: public/products/qoho/{direct-image-file-name}.png
+───────────────────────────────────────────────────────────── */
+
+const qohoImg = (fileName) => `/products/qoho/${fileName}`;
+
+const QOHO_PRODUCT_GROUPS = [
+  {
+    category: 'AI DVR / NVR Systems',
+    items: [
+      ['qh-ai-4g-dash-camera', 'AI 4G Dash Camera', '2CH/4CH 1080P AI Camera with 4G GPS WiFi', qohoImg('AI 4G Dash Camera.png')],
+      ['qh-mdvr8101s', 'MDVR8101S', '1080P HD Mobile DVR Camera', qohoImg('MDVR8101S.png')],
+      ['qh-mdvr101n', 'MDVR101N', '4G GPS SD Card Mobile DVR', qohoImg('MDVR101N.png')],
+      ['qh-three-sd-card-ai-mobile-dvr', 'Three SD Card AI Mobile DVR', '8CH AI 1080P Mobile DVR', qohoImg('three-sd-card-ai-mobile-dvr.png')],
+      ['qh-ai-hdd-sd-mobile-dvr', 'AI HDD/SD Mobile DVR', '8CH AI 4TB HDD/SSD Mobile DVR', qohoImg('AI HDDSD MobileDVR.png')],
+      ['qh-hybrid-mobile-nvr', 'Hybrid Mobile NVR', '8CH AHD + 4CH IPC / 12CH IPC NVR', qohoImg('Hybrid Mobile NVR.png')],
+      ['qh-smallest-mobile-dvr', 'Smallest Mobile DVR', '1CH to 4CH Waterproof Mobile DVR', qohoImg('Smallest Mobile DVR.png')],
+      ['qh-4ch-mobile-dvr-system-kit', '4CH Mobile DVR System Kit', '1080P Cameras + Dual Lens DVR Camera', qohoImg('DVS System.png')],
+      ['qh-8ch-ahd-mobile-dvr-system', '8CH AHD Mobile DVR System', 'GPS 4G WiFi AHD Mobile DVR System', qohoImg('360° View System.png')],
+    ],
+  },
+  {
+    category: 'AI Cameras',
+    items: [
+      ['qh-mc810ip', 'QH-MC810IP', 'AI Smart IP People Counting Camera', qohoImg('QH-MC810IP.png')],
+      ['qh-facial-palmprint-recognition-camera', 'Facial & Palmprint Recognition Camera', 'Driver Authentication Camera', qohoImg('Facial and palm recogntion camera.png')],
+      ['qh-ai-alcohol-detection-camera', 'AI Alcohol Detection Camera', 'Contactless Automatic Alcohol Detection', qohoImg('alcohol detection camera.png')],
+      ['qh-starlight-camera', 'Starlight Camera', 'AI Low-Light Full-Color Night Vision Camera', qohoImg('Starlight Camera.png')],
+      ['qh-dashboard-dms-camera', 'Dashboard Installation DMS', 'Driver Monitoring System Camera', qohoImg('Dashboard Installation DMS.png')],
+      ['qh-side-dms-camera', 'Side Installation DMS', 'Side Driver Monitoring Camera', qohoImg('Side Installation DMS.png')],
+      ['qh-anti-explosive-dms-camera', 'Anti-Explosive DMS Camera', 'DMS Camera for Oil/Gas and Truck Fleets', qohoImg('Anti-explosive DMS Camera.png')],
+      ['qh-facial-recognition-terminal', 'Facial Recognition Terminal', 'Face Recognition Biometric Machine', qohoImg('Facial and palm recogntion camera.png')],
+      ['qh-vehicle-people-counting-camera', 'Vehicle People Counting Camera', 'Passenger Counting Camera', qohoImg('Dual Lens Vehicle Counting Camera.png')],
+      ['qh-dual-lens-vehicle-counting-camera', 'Dual Lens Vehicle Counting Camera', 'Passenger Flow Counting Camera', qohoImg('Dual Lens Vehicle Counting Camera.png')],
+      ['qh-dual-lens-head-counting-camera', 'Dual Lens Head Counting Camera', 'People Counting Camera for Establishments', qohoImg('Dual Lens Head Counting Camera for Establishments.png')],
+    ],
+  },
+  {
+    category: 'Body Cameras',
+    items: [
+      ['qh-ai-1080p-face-recognition-body-camera', 'AI 1080P Face Recognition Body Camera', 'AI Body Camera', qohoImg('Advanced HD Body Camera.png')],
+      ['qh-1080p-portable-body-camera', '1080P Portable Body Camera', 'Portable Body Camera', qohoImg('1080P Portable Body Camera.png')],
+      ['qh-5g-ai-body-camera', '5G AI Body Camera', '5G AI Enhanced Imaging Body Camera', qohoImg('Advanced HD Body Camera.png')],
+      ['qh-4g-ai-body-camera-mini-cam', '4G AI Body Camera with 720P Mini Cam', '4G AI Imaging & Positioning Body Camera', qohoImg('1080P Portable Body Camera.png')],
+      ['qh-advanced-hd-body-camera', 'Advanced HD Body Camera', 'HD Recording Body Camera', qohoImg('Advanced HD Body Camera.png')],
+      ['qh-720p-mini-cam', '720P Mini Cam', 'Mini USB Digital Camera', qohoImg('1080P Portable Body Camera.png')],
+    ],
+  },
+  {
+    category: 'Vehicle Cameras',
+    items: [
+      ['qh-bb60v', 'BB60V', '1080P Anti-Explosive Camera', qohoImg('BB60V.png')],
+      ['qh-mc1205', 'MC1205', '1080P Bullet Front Road Camera', qohoImg('MC1205.png')],
+      ['qh-mc620', 'MC620', '1080P Dual Lens Vehicle Camera', qohoImg('MC620.png')],
+      ['qh-mc200d', 'MC200D', '2MP Dual View IP Camera', qohoImg('MC200D.png')],
+      ['qh-inside-140-cabin-camera', 'Inside 140° Cabin Camera', 'Wide View Cabin Camera', qohoImg('MC610.png')],
+      ['qh-mc018', 'MC018', '1080P 18pcs LED Rear View Camera', qohoImg('MC018.png')],
+      ['qh-mc076', 'MC076', '1080P Mini Vehicle IR Rear Camera', qohoImg('MC076.png')],
+      ['qh-mc512', 'MC512', '1080P 12pcs IR Side IP Camera', qohoImg('MC512.png')],
+      ['qh-mc610', 'MC610', '1080P Mini Vehicle Side Camera', qohoImg('MC610.png')],
+      ['qh-ipc011', 'IPC011', '1080P 2MP Mini IP Camera', qohoImg('IPC011.png')],
+      ['qh-mc710ip', 'MC710IP', 'Waterproof Vandalproof Dome IP Camera', qohoImg('MC710IP.png')],
+      ['qh-mc015w', 'MC015W', 'Vandal Proof IR Dome Bus Camera', qohoImg('MC015W.png')],
+      ['qh-mc524', 'MC524', '1080P 24pcs IR Dome Bus Camera', qohoImg('MC524.png')],
+    ],
+  },
+  {
+    category: '360° / BSD Systems',
+    items: [
+      ['qh-360-bsd-system', '360° BSD System', '10-inch 8CH 360° BSD System', qohoImg('360° BSD System.png')],
+      ['qh-360-ai-bsd-monitor-system', '360° AI BSD Monitor System', '10-inch 5CH 360° BSD System', qohoImg('360° AI BSD Monitor System.png')],
+      ['qh-dvs-system', 'DVS System', '7-inch Monitor + Radar + Rear Camera', qohoImg('DVS System.png')],
+      ['qh-360-view-system', '360° View System', 'Truck & Specialty Vehicle View System', qohoImg('360° View System.png')],
+    ],
+  },
+  {
+    category: 'On-board Monitors',
+    items: [
+      ['qh-7inch-2ch-car-monitor', '7inch 2CH Car Monitor', '720P/1080P 2CH Car Monitor', qohoImg('360° BSD System.png')],
+      ['qh-12-3-tft-lcd-car-monitor', '12.3” TFT-LCD Car Monitor', 'Wide TFT-LCD Vehicle Monitor', qohoImg('360° AI BSD Monitor System.png')],
+      ['qh-7inch-sd-card-quad-monitor', '7inch SD Card Quad Monitor', '720P HD Recording Quad Monitor', qohoImg('SD card Recording Quad Monitor.png')],
+      ['qh-7inch-waterproof-car-monitor', '7inch Waterproof Car Monitor', 'IP65 Waterproof Car Monitor', qohoImg('SD card Recording Quad Monitor.png')],
+      ['qh-wireless-waterproof-display-system', '7” Wireless Waterproof Display System', 'Wireless Waterproof Display System', qohoImg('360° BSD System.png')],
+      ['qh-wireless-video-recorder', '7” Wireless Video Recorder', '1080P Wireless Video Recorder', qohoImg('SD card Recording Quad Monitor.png')],
+    ],
+  },
+  {
+    category: 'PTZ & Peripherals',
+    items: [
+      ['qh-thermal-laser-ptz-camera', 'Thermal/Laser PTZ Camera', 'Thermal & Laser PTZ Camera', qohoImg('Thermal Imaging Vehicle Dual-Light Fusion Integrated Machine.png')],
+      ['qh-intelligent-ir-ptz-camera', 'Intelligent IR PTZ Camera', 'High-Speed Infrared PTZ Camera', qohoImg('Intelligent high-speed infrared PTZ Camera.png')],
+      ['qh-thermal-imaging-dual-light-machine', 'Thermal Imaging Dual-Light Machine', 'Vehicle Dual-Light Fusion Machine', qohoImg('Thermal Imaging Vehicle Dual-Light Fusion Integrated Machine.png')],
+      ['qh-ups-battery', 'UPS Battery', 'Mobile DVR Backup Battery', qohoImg('UPS Battery.png')],
+      ['qh-tire-pressure-monitoring-system', 'Tire Pressure Monitoring System', 'TPMS Monitoring System', qohoImg('Tire Pressure Monitoring System.png')],
+    ],
+  },
+];
+
+const qohoApplications = [
+  {
+    title: 'Fleet Safety',
+    desc: 'Supports safer vehicle operations with video evidence, monitoring and driver safety workflows.',
+  },
+  {
+    title: 'Commercial Vehicles',
+    desc: 'Suitable for buses, trucks, taxis, police vehicles, logistics fleets and specialty vehicles.',
+  },
+  {
+    title: 'Control Room Monitoring',
+    desc: 'Can be used with mobile DVR, NVR, CMS platforms and professional fleet monitoring workflows.',
+  },
+  {
+    title: 'Driver & Passenger Protection',
+    desc: 'Improves visibility, accountability and risk control during daily operations.',
+  },
+];
+
+const qohoSpecialDetails = {
+  'qh-ai-4g-dash-camera': {
+    tagline: 'All-in-one AI 4G dash camera with ADAS, DMS, GPS and WiFi.',
+    description:
+      'AI 4G Dash Camera is an all-in-one mDVR solution with 2CH/4CH 1080P AI camera support, built-in 4G, GPS, WiFi, ADAS, DMS and CMSV6 platform compatibility.',
+    features: [
+      '2CH/4CH 1080P AI camera support',
+      'Built-in 4G GPS WiFi',
+      'ADAS and DMS camera support',
+      'CMSV6, Wialon and third-party API compatibility',
+      'Remote live view via iOS, Android and PC',
+      'Seatbelt alarm and head counting support',
+    ],
+    specs: {
+      Processor: 'Novatek high-performance processor',
+      Compression: 'H.265',
+      Storage: '2 TF cards up to 512GB each',
+      Platform: 'CMSV6, Wialon and third-party platform API',
+    },
+  },
+  'qh-mdvr8101s': {
+    tagline: 'Compact 1080P mobile DVR with 4G, WiFi and GPS.',
+    description:
+      'MDVR8101S is a compact 1080P HD mobile DVR camera with integrated 4G, 2.4G WiFi, GPS/BeiDou positioning, dual TF card storage and G-Sensor safety alarm support.',
+    features: [
+      'Expandable video input support',
+      'Integrated 4G, WiFi and GPS/BD positioning',
+      'Dual TF card storage',
+      'G-Sensor acceleration, rollover and collision alarms',
+      'RS232 and CVBS output support',
+      'Low power professional vehicle DVR design',
+    ],
+    specs: {
+      Video: 'Up to 3x 1080P AHD cameras or 1x 1080P IPC',
+      Encoding: 'H.265/H.264 at 30FPS',
+      Storage: 'Dual TF card slots up to 1TB per card',
+      Physical: '110 x 70.5 x 35.6 mm; 0.22kg',
+      Temperature: '-20°C to +70°C',
+    },
+  },
+  'qh-mdvr101n': {
+    tagline: '4G GPS SD card mobile DVR for simple fleet video recording.',
+    description:
+      'MDVR101N supports H.264/H.265 encoding, 1080P video, TF card storage, CAT1 4G full network, external GPS/BD module and optional AI DMS/BSD detection.',
+    features: [
+      '1080P@25FPS video recording',
+      'CAT1 4G network support',
+      'External GPS/BD positioning module support',
+      'Optional infrared or white light night vision',
+      'Optional DMS or BSD AI detection',
+      'Mobile app and platform preview support',
+    ],
+    specs: {
+      Encoding: 'H.264 / H.265',
+      Video: '1080P@25FPS',
+      Storage: 'TF card up to 512GB',
+      'I/O': '1 input, 1 output and RS232 support',
+      AI: 'Optional DMS or BSD detection',
+    },
+  },
+  'qh-mc810ip': {
+    tagline: 'AI people counting and child safety monitoring for smart vehicles.',
+    description:
+      'QH-MC810IP is an AI smart IP people counting camera for passenger left-behind detection, child safety monitoring and real-time people counting linked with MDVR workflows.',
+    features: [
+      'Passenger left-behind detection',
+      'Child safety monitoring',
+      'Real-time people counting',
+      'MDVR alarm linkage',
+      'Remote APP notification support',
+      'Vehicle overload detection support',
+    ],
+    specs: {
+      Technology: 'AI face and passenger detection',
+      'Core Use': 'People counting and child safety monitoring',
+      Integration: 'MDVR linkage and remote APP notification',
+      Application: 'Family, business, ride-hailing and passenger fleets',
+    },
+  },
+  'qh-ai-alcohol-detection-camera': {
+    tagline: 'Contactless automatic alcohol detection camera for driver safety.',
+    description:
+      'AI Alcohol Detection Camera supports fully automatic contactless alcohol detection using sensor and camera-based detection for safer driver monitoring.',
+    features: [
+      'Contactless alcohol detection',
+      '99.90% accuracy',
+      'Fully automatic measurement',
+      'Side or front view installation',
+      'IP54 waterproof rating',
+      'Fast detection response',
+    ],
+    specs: {
+      'Working Voltage': 'DC 8–36V',
+      'Detection Angle': '45° horizontal view',
+      'Detection Time': '100ms to 1 second',
+      Accuracy: '99.90%',
+      'Detection Distance': '0.5 to 2 meters',
+      Waterproof: 'IP54',
+      'Operating Temperature': '-25°C to 80°C',
+    },
+  },
+  'qh-facial-palmprint-recognition-camera': {
+    tagline: 'Reliable driver authentication and attendance monitoring.',
+    description:
+      'Facial & Palmprint Recognition Camera is designed for driver authentication and attendance, replacing traditional i-button or fingerprint limitations with face and palmprint recognition.',
+    features: [
+      'Driver authentication and attendance',
+      'Facial recognition',
+      'Palmprint recognition',
+      'AHD video output for MDVR connection',
+      'RS232 integration with GPS tracker/mDVR',
+      'Bluetooth and USB driver face management',
+    ],
+    specs: {
+      'Face Capacity': 'Up to 100 faces',
+      Output: 'AHD video output',
+      Interface: 'RS232, Bluetooth and USB',
+      Protocol: 'I-write protocol for i-button replacement',
+    },
+  },
+};
+
+const makeQohoDetail = (id, model, name, category, imagePath) => {
+  const detail = qohoSpecialDetails[id] || {
+    tagline: `${model} for intelligent vehicle safety and fleet monitoring.`,
+    description: `${model} is a professional vehicle safety product designed for fleet monitoring, mobile surveillance, driver safety and advanced vehicle operations.`,
+    features: [
+      'Vehicle video monitoring support',
+      'Fleet safety workflow ready',
+      'Control room and platform integration support',
+      'Driver and passenger protection',
+      'Suitable for commercial vehicle operations',
+      'Professional installation support',
+    ],
+    specs: {
+      'Product Type': category,
+      Model: model,
+      Application: 'Fleet safety, vehicle monitoring and mobile surveillance',
+      Image: imagePath,
+    },
+  };
+
+  return {
+    model,
+    name,
+    image: imagePath,
+    category,
+    tagline: detail.tagline,
+    description: detail.description,
+    features: detail.features.map((label, index) => ({
+      icon: ['camera', 'adas', 'cloud', 'driver', 'gps', 'wire'][index % 6],
+      label,
+    })),
+    specs: {
+      general: {
+        label: 'General',
+        items: detail.specs,
+      },
+    },
+    applications: qohoApplications,
+    accessories: [
+      { label: 'Compatible camera cables', comment: 'Optional wiring and camera cables depending on installation.' },
+      { label: 'Mounting brackets', comment: 'Vehicle-specific mounting brackets for professional installation.' },
+      { label: 'Storage media', comment: 'TF card, SD card, HDD or SSD depending on supported model.' },
+      { label: 'External antennas', comment: 'GPS, 4G or WiFi antennas where supported.' },
+    ],
+  };
+};
+
+const QOHO_PRODUCT_DETAILS = Object.fromEntries(
+  QOHO_PRODUCT_GROUPS.flatMap((group) =>
+    group.items.map(([id, model, name, imagePath]) => [
+      id,
+      makeQohoDetail(id, model, name, group.category, imagePath),
+    ])
+  )
+);
+
 /* ─────────────────────────────────────────────────────────────
    MAIN COMPONENT
 ───────────────────────────────────────────────────────────── */
@@ -692,27 +990,50 @@ const ProductDetail = () => {
   const [activeTab, setActiveTab] = useState('features');
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [quoteData, setQuoteData] = useState({
-    name: '', email: '', company: '', phone: '', country: '', quantity: '', requirement: ''
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    country: '',
+    quantity: '',
+    requirement: '',
   });
 
-  const product = productDetails[productId];
+  const allProductDetails = {
+    ...productDetails,
+    ...QOHO_PRODUCT_DETAILS,
+  };
 
-  const allRelated = Object.entries(productDetails)
+  const product = allProductDetails[productId];
+
+  const allRelated = Object.entries(allProductDetails)
     .filter(([id]) => id !== productId)
-    .map(([id, p]) => ({ id, model: p.model, image: p.image, category: p.category, name: p.name }));
+    .map(([id, p]) => ({
+      id,
+      model: p.model,
+      image: p.image,
+      category: p.category,
+      name: p.name,
+    }));
+
   const related = [
-    ...allRelated.filter(p => p.category === product?.category),
-    ...allRelated.filter(p => p.category !== product?.category)
+    ...allRelated.filter((p) => p.category === product?.category),
+    ...allRelated.filter((p) => p.category !== product?.category),
   ].slice(0, 4);
 
-  const handleQuoteChange = e => setQuoteData({ ...quoteData, [e.target.name]: e.target.value });
+  const handleQuoteChange = (e) =>
+    setQuoteData({ ...quoteData, [e.target.name]: e.target.value });
 
   const handleQuoteSubmit = () => {
     if (!quoteData.name || !quoteData.email) {
       alert('Please fill in Name and Email.');
       return;
     }
-    const subject = encodeURIComponent(`Quote Request: ${product.model} — ${quoteData.company || 'Timeline Telematics'}`);
+
+    const subject = encodeURIComponent(
+      `Quote Request: ${product.model} — ${quoteData.company || 'Timeline Telematics'}`
+    );
+
     const body = encodeURIComponent(
 `Quote Request — ${product.model}
 
@@ -729,6 +1050,7 @@ ${quoteData.requirement}
 ---
 Sent from Timeline Telematics Product Page`
     );
+
     window.location.href = `mailto:info@teletix.me?subject=${subject}&body=${body}`;
     setQuoteOpen(false);
   };
@@ -737,16 +1059,18 @@ Sent from Timeline Telematics Product Page`
     return (
       <div className="pdp-not-found">
         <h2>Product Not Found</h2>
-        <Link to="/products" className="pdp-btn-primary">Browse Products</Link>
+        <Link to="/products" className="pdp-btn-primary">
+          Browse Products
+        </Link>
       </div>
     );
   }
 
   const tabs = [
-    { key: 'features',      label: 'Features' },
-    { key: 'specifications',label: 'Specifications' },
-    { key: 'applications',  label: 'Applications' },
-    { key: 'accessories',   label: 'Accessories' },
+    { key: 'features', label: 'Features' },
+    { key: 'specifications', label: 'Specifications' },
+    { key: 'applications', label: 'Applications' },
+    { key: 'accessories', label: 'Accessories' },
   ];
 
   return (
@@ -754,66 +1078,91 @@ Sent from Timeline Telematics Product Page`
       <TopBar />
       <Navbar />
 
-      {/* ── Breadcrumb ── */}
       <div className="pdp-breadcrumb">
         <div className="pdp-container">
-          <Link to="/">Home</Link><span>›</span>
-          <Link to="/products">Products</Link><span>›</span>
+          <Link to="/">Home</Link>
+          <span>›</span>
+          <Link to="/products">Products</Link>
+          <span>›</span>
           <span className="pdp-breadcrumb-active">{product.model}</span>
         </div>
       </div>
 
-      {/* ── Hero ── */}
       <section className="pdp-hero">
         <div className="pdp-container">
           <div className="pdp-hero-grid">
             <div className="pdp-hero-image-col">
               <div className="pdp-image-main">
-                <img src={product.image} alt={product.model} className="pdp-product-img"
-                  onError={e => { e.target.src = '/placeholder.png'; }} />
+                <img
+                  src={product.image}
+                  alt={product.model}
+                  className="pdp-product-img"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/placeholder.png';
+                  }}
+                />
               </div>
             </div>
+
             <div className="pdp-hero-info-col">
               <span className="pdp-category-badge">{product.category}</span>
               <h1 className="pdp-model-title">{product.model}</h1>
               <h2 className="pdp-model-subtitle">{product.name}</h2>
-              <p className="pdp-tagline"><em>{product.tagline}</em></p>
+              <p className="pdp-tagline">
+                <em>{product.tagline}</em>
+              </p>
               <p className="pdp-description">{product.description}</p>
+
               <ul className="pdp-quick-features">
                 {product.features.slice(0, 5).map((f, i) => (
                   <li key={i}>
-                    <svg className="pdp-li-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"/>
+                    <svg
+                      className="pdp-li-check"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
                     </svg>
                     {f.label}
                   </li>
                 ))}
               </ul>
+
               <div className="pdp-hero-actions">
-                <button className="pdp-btn-primary" onClick={() => setQuoteOpen(true)}>Get a Quote</button>
-                <a href="tel:+923111122883" className="pdp-btn-outline">Call Sales</a>
+                <button className="pdp-btn-primary" onClick={() => setQuoteOpen(true)}>
+                  Get a Quote
+                </button>
+                <a href="tel:+923111122883" className="pdp-btn-outline">
+                  Call Sales
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Tabs ── */}
       <section className="pdp-tabs-section">
         <div className="pdp-container">
           <div className="pdp-tabs-nav">
-            {tabs.map(tab => (
-              <button key={tab.key}
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
                 className={`pdp-tab-btn ${activeTab === tab.key ? 'active' : ''}`}
-                onClick={() => setActiveTab(tab.key)}>
+                onClick={() => setActiveTab(tab.key)}
+              >
                 {tab.label}
               </button>
             ))}
           </div>
 
           <div className="pdp-tab-content">
-
-            {/* ─ FEATURES ─ */}
             {activeTab === 'features' && (
               <div className="pdp-features-grid">
                 {product.features.map((f, i) => (
@@ -827,7 +1176,6 @@ Sent from Timeline Telematics Product Page`
               </div>
             )}
 
-            {/* ─ SPECIFICATIONS ─ */}
             {activeTab === 'specifications' && (
               <div className="pdp-specs-grouped">
                 {Object.values(product.specs).map((group, gi) => (
@@ -846,7 +1194,6 @@ Sent from Timeline Telematics Product Page`
               </div>
             )}
 
-            {/* ─ APPLICATIONS ─ */}
             {activeTab === 'applications' && (
               <div className="pdp-applications-grid">
                 {product.applications.map((app, i) => (
@@ -861,16 +1208,22 @@ Sent from Timeline Telematics Product Page`
               </div>
             )}
 
-            {/* ─ ACCESSORIES ─ */}
             {activeTab === 'accessories' && (
               <div className="pdp-accessories-grid">
                 {product.accessories.map((acc, i) => (
                   <div key={i} className="pdp-acc-card">
                     <div className="pdp-acc-img-placeholder">
-                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#bbb" strokeWidth="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                        <polyline points="21 15 16 10 5 21"/>
+                      <svg
+                        width="36"
+                        height="36"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#bbb"
+                        strokeWidth="1.5"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <polyline points="21 15 16 10 5 21" />
                       </svg>
                     </div>
                     <p className="pdp-acc-label">{acc.label}</p>
@@ -878,22 +1231,28 @@ Sent from Timeline Telematics Product Page`
                 ))}
               </div>
             )}
-
           </div>
         </div>
       </section>
 
-      {/* ── Related Products ── */}
       <section className="pdp-related-section">
         <div className="pdp-container">
           <h2 className="pdp-section-heading">Related Products</h2>
+
           <div className="pdp-related-grid">
-            {related.map(p => (
+            {related.map((p) => (
               <Link to={`/products/${p.id}`} key={p.id} className="pdp-related-card">
                 <div className="pdp-related-img-box">
-                  <img src={p.image} alt={p.model}
-                    onError={e => { e.target.src = '/placeholder.png'; }} />
+                  <img
+                    src={p.image}
+                    alt={p.model}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/placeholder.png';
+                    }}
+                  />
                 </div>
+
                 <div className="pdp-related-info">
                   <strong>{p.model}</strong>
                   <span className="pdp-related-sublabel">{p.name}</span>
@@ -905,7 +1264,6 @@ Sent from Timeline Telematics Product Page`
         </div>
       </section>
 
-      {/* ── CTA Strip ── */}
       <section className="pdp-cta-strip">
         <div className="pdp-container">
           <div className="pdp-cta-strip-inner">
@@ -913,9 +1271,14 @@ Sent from Timeline Telematics Product Page`
               <h3>Interested in {product.model}?</h3>
               <p>Get pricing, specs, and availability from our sales team.</p>
             </div>
+
             <div className="pdp-cta-strip-actions">
-              <button className="pdp-btn-primary" onClick={() => setQuoteOpen(true)}>Get a Quote</button>
-              <a href="tel:+971563863615" className="pdp-btn-outline">+971 56 386 3615</a>
+              <button className="pdp-btn-primary" onClick={() => setQuoteOpen(true)}>
+                Get a Quote
+              </button>
+              <a href="tel:+971563863615" className="pdp-btn-outline">
+                +971 56 386 3615
+              </a>
             </div>
           </div>
         </div>
@@ -923,45 +1286,86 @@ Sent from Timeline Telematics Product Page`
 
       <Footer />
 
-      {/* ── Quote Modal ── */}
       {quoteOpen && (
-        <div className="pdp-modal-overlay" onClick={e => { if (e.target.classList.contains('pdp-modal-overlay')) setQuoteOpen(false); }}>
+        <div
+          className="pdp-modal-overlay"
+          onClick={(e) => {
+            if (e.target.classList.contains('pdp-modal-overlay')) setQuoteOpen(false);
+          }}
+        >
           <div className="pdp-modal">
             <div className="pdp-modal-header">
               <div className="pdp-modal-header-left">
                 <h3>Get a Quote</h3>
                 <p>Fill in your details and we'll get back to you shortly</p>
               </div>
+
               <button className="pdp-modal-close" onClick={() => setQuoteOpen(false)}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
               </button>
             </div>
 
             <div className="pdp-modal-body">
               <div className="pdp-modal-product-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
                 Requesting quote for: <strong>{product.model}</strong>
               </div>
 
               <div className="pdp-modal-row">
                 <div className="pdp-modal-group">
                   <label>Full Name *</label>
-                  <input type="text" name="name" value={quoteData.name} onChange={handleQuoteChange} placeholder="Your name" />
+                  <input
+                    type="text"
+                    name="name"
+                    value={quoteData.name}
+                    onChange={handleQuoteChange}
+                    placeholder="Your name"
+                  />
                 </div>
+
                 <div className="pdp-modal-group">
                   <label>Email *</label>
-                  <input type="email" name="email" value={quoteData.email} onChange={handleQuoteChange} placeholder="your@email.com" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={quoteData.email}
+                    onChange={handleQuoteChange}
+                    placeholder="your@email.com"
+                  />
                 </div>
               </div>
 
               <div className="pdp-modal-row">
                 <div className="pdp-modal-group">
                   <label>Phone</label>
-                  <input type="tel" name="phone" value={quoteData.phone} onChange={handleQuoteChange} placeholder="+92 311 1122 883" />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={quoteData.phone}
+                    onChange={handleQuoteChange}
+                    placeholder="+92 311 1122 883"
+                  />
                 </div>
+
                 <div className="pdp-modal-group">
                   <label>Company</label>
-                  <input type="text" name="company" value={quoteData.company} onChange={handleQuoteChange} placeholder="Company name" />
+                  <input
+                    type="text"
+                    name="company"
+                    value={quoteData.company}
+                    onChange={handleQuoteChange}
+                    placeholder="Company name"
+                  />
                 </div>
               </div>
 
@@ -978,22 +1382,38 @@ Sent from Timeline Telematics Product Page`
                     <option>Other</option>
                   </select>
                 </div>
+
                 <div className="pdp-modal-group">
                   <label>Expected Quantity</label>
-                  <input type="text" name="quantity" value={quoteData.quantity} onChange={handleQuoteChange} placeholder="e.g. 10-50 units" />
+                  <input
+                    type="text"
+                    name="quantity"
+                    value={quoteData.quantity}
+                    onChange={handleQuoteChange}
+                    placeholder="e.g. 10-50 units"
+                  />
                 </div>
               </div>
 
               <div className="pdp-modal-row">
                 <div className="pdp-modal-group full">
                   <label>Your Requirement *</label>
-                  <textarea name="requirement" value={quoteData.requirement} onChange={handleQuoteChange} placeholder="Describe your requirements, use case, or questions about this product..." />
+                  <textarea
+                    name="requirement"
+                    value={quoteData.requirement}
+                    onChange={handleQuoteChange}
+                    placeholder="Describe your requirements, use case, or questions about this product..."
+                  />
                 </div>
               </div>
 
               <div className="pdp-modal-footer">
-                <button className="pdp-modal-cancel" onClick={() => setQuoteOpen(false)}>Cancel</button>
-                <button className="pdp-modal-submit" onClick={handleQuoteSubmit}>Send Quote Request</button>
+                <button className="pdp-modal-cancel" onClick={() => setQuoteOpen(false)}>
+                  Cancel
+                </button>
+                <button className="pdp-modal-submit" onClick={handleQuoteSubmit}>
+                  Send Quote Request
+                </button>
               </div>
             </div>
           </div>

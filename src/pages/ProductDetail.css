@@ -719,3 +719,37 @@
   .pdp-btn-primary, .pdp-btn-outline { text-align: center; }
   .pdp-cta-strip-actions { flex-direction: column; width: 100%; }
 }
+
+
+
+.pdp-product-placeholder {
+  width: 100%;
+  min-height: 240px;
+  border: 2px dashed #e8e8e8;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  background: #fff;
+  color: #111;
+  padding: 24px;
+}
+
+.pdp-product-placeholder strong {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--red);
+  line-height: 1;
+}
+
+.pdp-product-placeholder span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
