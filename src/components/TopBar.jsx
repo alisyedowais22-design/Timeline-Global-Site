@@ -3,10 +3,10 @@ import { Facebook, Twitter, Linkedin, Youtube, Instagram, Search } from 'lucide-
 
 const SOCIALS = [
   { Icon: Linkedin,  href: '#' },
-  { Icon: Twitter,   href: '#' },
-  { Icon: Facebook,  href: '#' },
-  { Icon: Youtube,   href: '#' },
-  { Icon: Instagram, href: '#' },
+  { Icon: Twitter,   href: 'https://x.com/TimelineMatics' },
+  { Icon: Facebook,  href: 'https://www.facebook.com/profile.php?id=61591590630260' },
+  { Icon: Youtube,   href: 'https://www.youtube.com/@TimelineTelematics' },
+  { Icon: Instagram, href: 'https://www.instagram.com/timelinetelematics/?hl=en' },
 ];
 
 const TopBar = () => {

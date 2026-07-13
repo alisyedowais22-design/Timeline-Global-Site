@@ -76,10 +76,10 @@ const productDetails = {
       { title: 'Logistics & Delivery', desc: 'Route optimization and driver behavior monitoring.' },
     ],
     accessories: [
-      { label: 'Backup Battery Pack',   comment: '/* Add <img> here */' },
-      { label: 'External GPS Antenna',  comment: '/* Add <img> here */' },
-      { label: 'Driver ID Tag (RFID)',   comment: '/* Add <img> here */' },
-      { label: '1-Wire Temp Sensor',    comment: '/* Add <img> here */' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
+      { label: 'KC208S Remote Control', image: '/accessories/kc208s.png' },
+      { label: 'K7800P Environment Sensor', image: '/accessories/k7800p.png' },
     ],
   },
 
@@ -110,8 +110,8 @@ const productDetails = {
       { title: 'Vehicle Recovery', desc: 'Hidden placement aids in stolen vehicle recovery.' },
     ],
     accessories: [
-      { label: 'Wiring Harness',   comment: '/* Add <img> here */' },
-      { label: 'Mounting Bracket', comment: '/* Add <img> here */' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
     ],
   },
 
@@ -143,8 +143,8 @@ const productDetails = {
       { title: 'Asset Protection',  desc: 'Concealed placement for high-value vehicle security.' },
     ],
     accessories: [
-      { label: 'Mini Wiring Harness', comment: '/* Add <img> here */' },
-      { label: 'Adhesive Mount Kit',  comment: '/* Add <img> here */' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
     ],
   },
 
@@ -175,8 +175,8 @@ const productDetails = {
       { title: 'Driver Monitoring', desc: 'Track driver behavior and route compliance.' },
     ],
     accessories: [
-      { label: 'OBD Power Cable', comment: '/* Add <img> here */' },
-      { label: 'Mounting Clip',   comment: '/* Add <img> here */' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
+      { label: 'KC208S Remote Control', image: '/accessories/kc208s.png' },
     ],
   },
 
@@ -209,9 +209,9 @@ const productDetails = {
       { title: 'Agricultural Vehicles', desc: 'Monitor tractors and farm equipment in remote areas.' },
     ],
     accessories: [
-      { label: 'External Power Relay',    comment: '/* Add <img> here */' },
-      { label: 'Fuel Sensor Adapter',     comment: '/* Add <img> here */' },
-      { label: 'RS485 Temperature Probe', comment: '/* Add <img> here */' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
+      { label: 'KF041S Capacitive Fuel Level Sensor', image: '/accessories/kf041s.png' },
+      { label: 'K7800P Environment Sensor', image: '/accessories/k7800p.png' },
     ],
   },
 
@@ -243,9 +243,9 @@ const productDetails = {
       { title: 'Transport Operators',desc: 'Full visibility across all vehicles and routes.' },
     ],
     accessories: [
-      { label: 'Fuel Level Sensor',  comment: '/* Add <img> here */' },
-      { label: 'Driver ID Reader',   comment: '/* Add <img> here */' },
-      { label: 'Temperature Probe',  comment: '/* Add <img> here */' },
+      { label: 'KF041S Fuel Level Sensor', image: '/accessories/kf041s.png' },
+      { label: 'KC208S Remote Control', image: '/accessories/kc208s.png' },
+      { label: 'K7800P Temperature Probe', image: '/accessories/k7800p.png' },
     ],
   },
 
@@ -277,8 +277,8 @@ const productDetails = {
       { title: 'Government Fleets',    desc: 'Compliance and accountability monitoring.' },
     ],
     accessories: [
-      { label: 'CAN Bus Interface Module', comment: '/* Add <img> here */' },
-      { label: 'External Antenna Kit',     comment: '/* Add <img> here */' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
     ],
   },
 
@@ -310,8 +310,8 @@ const productDetails = {
       { title: 'Personal Vehicles',   desc: 'SOS alerts for personal safety on the road.' },
     ],
     accessories: [
-      { label: 'External Microphone', comment: '/* Add <img> here */' },
-      { label: 'SOS Panic Button',    comment: '/* Add <img> here */' },
+      { label: 'KC208S Remote Control', image: '/accessories/kc208s.png' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
     ],
   },
 
@@ -342,8 +342,8 @@ const productDetails = {
       { title: 'Personal Vehicles',desc: 'Basic GPS tracking and vehicle security.' },
     ],
     accessories: [
-      { label: 'Relay Fuel Cutoff',   comment: '/* Add <img> here */' },
-      { label: 'External SOS Button', comment: '/* Add <img> here */' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
+      { label: 'KC208S Remote Control', image: '/accessories/kc208s.png' },
     ],
   },
 
@@ -375,9 +375,9 @@ const productDetails = {
       { title: 'Enterprise Fleets',  desc: 'Rich telemetry for large fleet cost management.' },
     ],
     accessories: [
-      { label: 'CAN Bus Splitter Cable', comment: '/* Add <img> here */' },
-      { label: 'J1939 Adapter Harness',  comment: '/* Add <img> here */' },
-      { label: 'OBD-II Adapter',         comment: '/* Add <img> here */' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
+      { label: 'KF041S Fuel Level Sensor', image: '/accessories/kf041s.png' },
     ],
   },
 
@@ -409,9 +409,8 @@ const productDetails = {
       { title: 'Pet Tracking',    desc: 'Attach to pet collar for real-time location updates.' },
     ],
     accessories: [
-      { label: 'Lanyard Carry Case', comment: '/* Add <img> here */' },
-      { label: 'Pet Collar Clip',    comment: '/* Add <img> here */' },
-      { label: 'Belt Clip Holster',  comment: '/* Add <img> here */' },
+      { label: 'K7800P Environment Sensor', image: '/accessories/k7800p.png' },
+      { label: 'KC208S Remote Control', image: '/accessories/kc208s.png' },
     ],
   },
 
@@ -443,9 +442,9 @@ const productDetails = {
       { title: 'Anti-Theft Protection',desc:'Covert placement on vehicles for recovery operations.' },
     ],
     accessories: [
-      { label: 'Heavy-Duty Magnet Base',       comment: '/* Add <img> here */' },
-      { label: 'Screw Mount Bracket',          comment: '/* Add <img> here */' },
-      { label: 'External Temperature Probe',   comment: '/* Add <img> here */' },
+      { label: 'K7800P Environment Sensor', image: '/accessories/k7800p.png' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
+      { label: 'KF281S BLE Powered Fuel Level Sensor', image: '/accessories/kf281s.png' },
     ],
   },
 
@@ -477,8 +476,8 @@ const productDetails = {
       { title: 'Vehicle Recovery',   desc: 'Hidden tracker for stolen vehicle recovery operations.' },
     ],
     accessories: [
-      { label: 'Magnetic Mount Bracket',    comment: '/* Add <img> here */' },
-      { label: 'Waterproof Cable Extension',comment: '/* Add <img> here */' },
+      { label: 'K7800P Environment Sensor', image: '/accessories/k7800p.png' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
     ],
   },
 
@@ -510,9 +509,9 @@ const productDetails = {
       { title: 'Ride-Sharing Services',desc: 'Driver and cabin monitoring for passenger safety.' },
     ],
     accessories: [
-      { label: 'IR Inward-Facing Cabin Camera',    comment: '/* Add <img> here */' },
-      { label: 'Rear View Camera',                 comment: '/* Add <img> here */' },
-      { label: 'External GPS Antenna',             comment: '/* Add <img> here */' },
+      { label: 'CI05F Cabin-View Full AHD Camera', image: '/accessories/ci05f.png' },
+      { label: 'CI06F Cabin-View Full AHD Camera', image: '/accessories/ci06f.png' },
+      { label: 'CE02 IP67 Blindspot Camera', image: '/accessories/ce02.png' },
     ],
   },
 
@@ -544,10 +543,10 @@ const productDetails = {
       { title: 'Driver Training',    desc: 'Video evidence for coaching and performance reviews.' },
     ],
     accessories: [
-      { label: 'Cabin-View USB Camera',  comment: '/* Add <img> here */' },
-      { label: 'IP67 Blindspot Camera',  comment: '/* Add <img> here */' },
-      { label: 'Mini IR DMS Camera',     comment: '/* Add <img> here */' },
-      { label: 'In-Cab SOS Button',      comment: '/* Add <img> here */' },
+      { label: 'CI02 Cabin-View USB Camera', image: '/accessories/ci02.png' },
+      { label: 'CE02 IP67 Blindspot Camera', image: '/accessories/ce02.png' },
+      { label: 'CD02 Driver-Facing Infrared Camera', image: '/accessories/cd02.png' },
+      { label: 'JCM0700 Display Unit', image: '/accessories/jcm0700.png' },
     ],
   },
 
@@ -579,8 +578,8 @@ const productDetails = {
       { title: 'Government Vehicles',desc: 'Compliance monitoring and incident documentation.' },
     ],
     accessories: [
-      { label: 'IR Inward-Facing Camera',  comment: '/* Add <img> here */' },
-      { label: 'Cabin-View USB Camera',    comment: '/* Add <img> here */' },
+      { label: 'CI03 Cabin-View Infrared Camera', image: '/accessories/ci03.png' },
+      { label: 'CE02 IP67 Blindspot Camera', image: '/accessories/ce02.png' },
     ],
   },
 
@@ -612,8 +611,8 @@ const productDetails = {
       { title: 'Enterprise Fleets',     desc: 'Cloud backup and platform integration for large operations.' },
     ],
     accessories: [
-      { label: 'Cabin-View USB Camera',  comment: '/* Add <img> here */' },
-      { label: 'External GPS Antenna',   comment: '/* Add <img> here */' },
+      { label: 'CI03 Cabin-View Infrared Camera', image: '/accessories/ci03.png' },
+      { label: 'CE02 IP67 Blindspot Camera', image: '/accessories/ce02.png' },
     ],
   },
 
@@ -645,8 +644,9 @@ const productDetails = {
       { title: 'Mixed Fleets',     desc: 'Consistent monitoring across cars, vans, and light trucks.' },
     ],
     accessories: [
-      { label: 'Replacement DMS Camera',  comment: '/* Add <img> here */' },
-      { label: 'Windshield Mount Kit',    comment: '/* Add <img> here */' },
+      { label: 'CI01 Cabin-View Infrared Camera', image: '/accessories/ci01.png' },
+      { label: 'CE01 Rear-View Waterproof Camera', image: '/accessories/ce01.png' },
+      { label: 'CI03 Cabin-View Infrared Camera', image: '/accessories/ci03.png' },
     ],
   },
 
@@ -677,8 +677,8 @@ const productDetails = {
       { title: 'Parking Security',       desc: 'Motion-triggered recording while vehicle is parked.' },
     ],
     accessories: [
-      { label: 'Hardwire Kit (Parking Mode)', comment: '/* Add <img> here */' },
-      { label: '128GB MicroSD Card',          comment: '/* Add <img> here */' },
+      { label: 'KZ081V DC-DC Converter', image: '/accessories/kz081v.png' },
+      { label: 'KJ806 Extended Control Box', image: '/accessories/kj806.png' },
     ],
   },
 };
@@ -964,10 +964,10 @@ const makeQohoDetail = (id, model, name, category, imagePath) => {
     },
     applications: qohoApplications,
     accessories: [
-      { label: 'Compatible camera cables', comment: 'Optional wiring and camera cables depending on installation.' },
-      { label: 'Mounting brackets', comment: 'Vehicle-specific mounting brackets for professional installation.' },
-      { label: 'Storage media', comment: 'TF card, SD card, HDD or SSD depending on supported model.' },
-      { label: 'External antennas', comment: 'GPS, 4G or WiFi antennas where supported.' },
+      { label: 'Compatible Camera Cables', image: '/accessories/kj806.png', comment: 'Optional wiring and camera cables depending on installation.' },
+      { label: 'Mounting Brackets', image: '/accessories/kz081v.png', comment: 'Vehicle-specific mounting brackets for professional installation.' },
+      { label: 'Storage Media', image: '/accessories/jcm0700.png', comment: 'TF card, SD card, HDD or SSD depending on supported model.' },
+      { label: 'External Antennas', image: '/accessories/kc208s.png', comment: 'GPS, 4G or WiFi antennas where supported.' },
     ],
   };
 };
@@ -1213,18 +1213,39 @@ Sent from Timeline Telematics Product Page`
                 {product.accessories.map((acc, i) => (
                   <div key={i} className="pdp-acc-card">
                     <div className="pdp-acc-img-placeholder">
-                      <svg
-                        width="36"
-                        height="36"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#bbb"
-                        strokeWidth="1.5"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <circle cx="8.5" cy="8.5" r="1.5" />
-                        <polyline points="21 15 16 10 5 21" />
-                      </svg>
+                      {acc.image ? (
+                        <img
+                          src={acc.image}
+                          alt={acc.label}
+                          className="pdp-acc-img"
+                          loading="lazy"
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'contain',
+                            padding: '24px',
+                            boxSizing: 'border-box',
+                            display: 'block',
+                          }}
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                      ) : (
+                        <svg
+                          width="36"
+                          height="36"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#bbb"
+                          strokeWidth="1.5"
+                        >
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <circle cx="8.5" cy="8.5" r="1.5" />
+                          <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                      )}
                     </div>
                     <p className="pdp-acc-label">{acc.label}</p>
                   </div>

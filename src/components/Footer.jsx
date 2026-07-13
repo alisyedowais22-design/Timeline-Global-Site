@@ -35,10 +35,10 @@ const PRODUCT_LINKS = [
 ];
 
 const SOCIALS = [
-  { Icon: Facebook, href: '#', label: 'Facebook' },
-  { Icon: Twitter, href: '#', label: 'Twitter' },
+  { Icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61591590630260', label: 'Facebook' },
+  { Icon: Twitter, href: 'https://x.com/TimelineMatics', label: 'Twitter' },
   { Icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { Icon: Youtube, href: '#', label: 'YouTube' },
+  { Icon: Youtube, href: 'https://www.youtube.com/@TimelineTelematics', label: 'YouTube' },
 ];
 
 const FooterHeading = ({ children }) => (
