@@ -1070,7 +1070,6 @@ Sent from Timeline Telematics Product Page`
     { key: 'features', label: 'Features' },
     { key: 'specifications', label: 'Specifications' },
     { key: 'applications', label: 'Applications' },
-    { key: 'accessories', label: 'Accessories' },
   ];
 
   return (
@@ -1208,50 +1207,6 @@ Sent from Timeline Telematics Product Page`
               </div>
             )}
 
-            {activeTab === 'accessories' && (
-              <div className="pdp-accessories-grid">
-                {product.accessories.map((acc, i) => (
-                  <div key={i} className="pdp-acc-card">
-                    <div className="pdp-acc-img-placeholder">
-                      {acc.image ? (
-                        <img
-                          src={acc.image}
-                          alt={acc.label}
-                          className="pdp-acc-img"
-                          loading="lazy"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'contain',
-                            padding: '24px',
-                            boxSizing: 'border-box',
-                            display: 'block',
-                          }}
-                          onError={(e) => {
-                            e.currentTarget.onerror = null;
-                            e.currentTarget.style.display = 'none';
-                          }}
-                        />
-                      ) : (
-                        <svg
-                          width="36"
-                          height="36"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="#bbb"
-                          strokeWidth="1.5"
-                        >
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <circle cx="8.5" cy="8.5" r="1.5" />
-                          <polyline points="21 15 16 10 5 21" />
-                        </svg>
-                      )}
-                    </div>
-                    <p className="pdp-acc-label">{acc.label}</p>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </section>
