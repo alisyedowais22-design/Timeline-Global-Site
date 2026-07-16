@@ -58,6 +58,8 @@ const ProductsPage = () => {
       label: 'AI Dashcams',
       desc: 'ADAS & DMS AI-powered dashcams for fleet safety',
       products: [
+        { id: 'f5', model: 'F5', image: '/products/f5.png', name: 'ADAS + BSD DashCam' },
+        { id: 'f7', model: 'F7', image: '/products/f7.png', name: 'ADAS + BSD DashCam' },
         { id: 'jc371', model: 'JC371', image: '/products/jc371.png', name: 'AI Dashcam with ADAS' },
         { id: 'jc450', model: 'JC450', image: '/products/jc450.png', name: 'Multi-Channel AI Dashcam' },
         { id: 'jc261', model: 'JC261', image: '/products/jc261.png', name: 'Dual Camera AI Dashcam' },
@@ -89,7 +91,7 @@ const ProductsPage = () => {
         { id: 'qh-hybrid-mobile-nvr', model: 'Hybrid Mobile NVR', image: qohoImg('Hybrid Mobile NVR.png'), name: '8CH AHD + 4CH IPC / 12CH IPC NVR' },
         { id: 'qh-smallest-mobile-dvr', model: 'Smallest Mobile DVR', image: qohoImg('Smallest Mobile DVR.png'), name: '1CH to 4CH Waterproof Mobile DVR' },
         { id: 'qh-4ch-mobile-dvr-system-kit', model: '4CH Mobile DVR System Kit', image: qohoImg('DVS System.png'), name: '1080P Cameras + Dual Lens DVR Camera' },
-        { id: 'qh-8ch-ahd-mobile-dvr-system', model: '8CH AHD Mobile DVR System', image: qohoImg('360° View System.png'), name: 'GPS 4G WiFi AHD Mobile DVR System' },
+        //{ id: 'qh-8ch-ahd-mobile-dvr-system', model: '8CH AHD Mobile DVR System', image: qohoImg('360° View System.png'), name: 'GPS 4G WiFi AHD Mobile DVR System' },
       ],
     },
     {
@@ -148,7 +150,7 @@ const ProductsPage = () => {
       label: '360° / BSD Systems',
       desc: '360° surround view, BSD, DVS and radar monitoring systems',
       products: [
-        { id: 'qh-360-bsd-system', model: '360° BSD System', image: qohoImg('360° BSD System.png'), name: '10-inch 8CH 360° BSD System' },
+        //{ id: 'qh-360-bsd-system', model: '360° BSD System', image: qohoImg('360° BSD System.png'), name: '10-inch 8CH 360° BSD System' },
         { id: 'qh-360-ai-bsd-monitor-system', model: '360° AI BSD Monitor System', image: qohoImg('360° AI BSD Monitor System.png'), name: '10-inch 5CH 360° BSD System' },
         { id: 'qh-dvs-system', model: 'DVS System', image: qohoImg('DVS System.png'), name: '7-inch Monitor + Radar + Rear Camera' },
         { id: 'qh-360-view-system', model: '360° View System', image: qohoImg('360° View System.png'), name: 'Truck & Specialty Vehicle View System' },

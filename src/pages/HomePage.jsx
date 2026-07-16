@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import TopBar      from '../components/TopBar';
 import Navbar      from '../components/Navbar';
 import Hero        from '../components/Hero';
+import ProductBannerSlider from '../components/ProductBannerSlider';
 import Industries  from '../components/Industries';
 import CaseStudies from '../components/CaseStudies';
 import CTABanner   from '../components/CTABanner';
@@ -1057,7 +1058,7 @@ const HomePage = () => {
         <Hero />
         <Industries />
         <CaseStudies />
-
+        <ProductBannerSlider />
         <Ticker />
         <StatsSection />
         <CEOSection />

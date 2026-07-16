@@ -80,7 +80,7 @@ const DEVICES = [
       { label: 'Hybrid Mobile NVR', desc: '8CH AHD + 4CH IPC', to: '/products/qh-hybrid-mobile-nvr' },
       { label: 'Smallest Mobile DVR', desc: '1CH to 4CH Waterproof DVR', to: '/products/qh-smallest-mobile-dvr' },
       { label: '4CH Mobile DVR Kit', desc: '1080P Cameras + DVR', to: '/products/qh-4ch-mobile-dvr-system-kit' },
-      { label: '8CH AHD Mobile DVR', desc: 'GPS 4G WiFi DVR System', to: '/products/qh-8ch-ahd-mobile-dvr-system' },
+      //{ label: '8CH AHD Mobile DVR', desc: 'GPS 4G WiFi DVR System', to: '/products/qh-8ch-ahd-mobile-dvr-system' },
     ],
   },
   {
